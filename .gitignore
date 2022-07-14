@@ -1,0 +1,14 @@
+.env
+.pyc
+*.iml
+.directory
+.idea
+env/
+__pycache__/
+*.db
+*.db-journal
+nimblebuy_test
+.vscode/
+.pytest_cache/
+static/images/dp/1001750503.jpg
+static/images/dp/1001859014.jpg
