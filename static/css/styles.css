@@ -1,0 +1,17 @@
+:root {
+    --primary-color: #006D77;
+    --secondary-color: #83c5be;
+    --accent-color: #e29578;
+    --other-color-1: #edf6f9;
+    --other-color-2: #ffddd2;
+
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
