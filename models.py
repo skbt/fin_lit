@@ -1,5 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
-import arrow
 
 db = SQLAlchemy()
 
@@ -28,13 +27,13 @@ def db_drop_and_create_all():
     db.create_all()
 
 class User(db.Model):
-    __tabelname__ = 'users'
+    __tablename__ = 'users'
     id = db.Column(db.String, primary_key=True)
     name = db.Column(db.String)
     school = db.Column(db.String)
     email = db.Column(db.String)
     password = db.Column(db.String)
-    role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
+    role_id = db.Column(db.Integer, db.ForeignKey('roles.role_id'))
     major = db.Column(db.String)
     phone = db.Column(db.String)
     dp = db.Column(db.String)
