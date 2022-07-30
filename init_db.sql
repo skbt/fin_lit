@@ -1,19 +1,19 @@
 CREATE TABLE `users` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255) NOT NULL,
-	`school_id` VARCHAR(255) NOT NULL,
-	`email` VARCHAR(255) NOT NULL,
-	`password` VARCHAR(255) NOT NULL,
+	`id` varchar(20) NOT NULL,
+	`name` varchar(255) NOT NULL,
+	`school` varchar(255) NOT NULL,
+	`email` varchar(255) NOT NULL,
+	`password` varchar(255) NOT NULL,
 	`role_id` INT NOT NULL,
-	`dp` VARCHAR(255) NOT NULL,
-	`major` VARCHAR(255) NOT NULL,
-	`phone` VARCHAR(10) NOT NULL,
+	`dp` varchar(255) NOT NULL,
+	`major` varchar(255) NOT NULL,
+	`phone` varchar(10) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `modules` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255) NOT NULL,
+	`name` varchar(255) NOT NULL,
 	`desc` varchar(500) NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -27,14 +27,14 @@ CREATE TABLE `roles` (
 CREATE TABLE `module_completion` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`module_id` INT NOT NULL,
-	`user_id` INT NOT NULL,
+	`user_id` varchar(20) NOT NULL,
 	`completion` FLOAT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `points` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`user_id` INT NOT NULL,
+	`user_id` varchar(20) NOT NULL,
 	`points` FLOAT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -49,8 +49,8 @@ CREATE TABLE `module_scores` (
 
 CREATE TABLE `media` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`type` VARCHAR(255) NOT NULL,
-	`path` VARCHAR(255) NOT NULL,
+	`type` varchar(255) NOT NULL,
+	`path` varchar(255) NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
@@ -69,15 +69,15 @@ CREATE TABLE `module_data` (
 
 CREATE TABLE `course_completion` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`user_id` INT NOT NULL,
+	`user_id` varchar(20) NOT NULL,
 	`count` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `submodules` (
 	`id` INT NOT NULL AUTO_INCREMENT,
-	`name` VARCHAR(255) NOT NULL,
-	`desc` VARCHAR(255) NOT NULL,
+	`name` varchar(255) NOT NULL,
+	`desc` varchar(255) NOT NULL,
 	`module_id` INT NOT NULL,
 	PRIMARY KEY (`id`)
 );
@@ -85,7 +85,7 @@ CREATE TABLE `submodules` (
 CREATE TABLE `submodule_completion` (
 	`id` INT NOT NULL AUTO_INCREMENT,
 	`submodule_id` INT NOT NULL,
-	`user_id` INT NOT NULL,
+	`user_id` varchar(20) NOT NULL,
 	`completion` FLOAT NOT NULL,
 	PRIMARY KEY (`id`)
 );
