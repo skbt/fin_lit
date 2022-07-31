@@ -15,3 +15,5 @@
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
 }
+
+.top-buffer { margin-top:20px; }
