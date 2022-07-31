@@ -97,13 +97,13 @@ def logout():
 
 @app.route('/course')
 def course():
-    if 'user' not in session:
-        return redirect(url_for('login_page'))
-    else:
-        return render_template('course.html')
+    return render_template('course.html')
 
 @app.route('/modules/<int:module_id>')
 def module(module_id):
+    if 'user' not in session:
+        flash('Please login to start the course!')
+        return redirect(request.referrer)
     submodules = SubModules.query.filter_by(module_id=module_id).all()
     return render_template('module.html', module_id=module_id, submodules=submodules)
 
