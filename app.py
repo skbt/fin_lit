@@ -93,7 +93,7 @@ def logout():
             session.pop('user_roles')
     if 'broadcast_messages' in session:
         session.pop('broadcast_messages')
-    return redirect(url_for('login_page'))
+    return redirect(url_for('home'))
 
 @app.route('/course')
 def course():
