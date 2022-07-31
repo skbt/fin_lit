@@ -102,9 +102,10 @@ def course():
     else:
         return render_template('course.html')
 
-@app.route('/module/<int:module_id>')
+@app.route('/modules/<int:module_id>')
 def module(module_id):
-    return render_template('module.html', module_id=module_id)
+    submodules = SubModules.query.filter_by(module_id=module_id).all()
+    return render_template('module.html', module_id=module_id, submodules=submodules)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

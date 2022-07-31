@@ -1,0 +1,85 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Course
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Module {{ module_id }}
+                    </h2>
+                    <div class="text-muted mt-1">{{ submodules|length }} items</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="container-xl">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="accordion" id="accordion-example">
+
+                        {% for item in submodules %}
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading-1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-{{ item.id }}" aria-expanded="false">
+                                    {{ item.name }}
+                                </button>
+                            </h2>
+                            <div id="collapse-{{ item.id }}" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion-example">
+                                <div class="accordion-body pt-0">
+                                    <p>{{ item.desc }}</p>
+                                    {% if item.type == "PPT" %}
+                                    <iframe src="{{ item.data }}" frameborder="0" width="960" height="749"
+                                        allowfullscreen="true" mozallowfullscreen="true"
+                                        webkitallowfullscreen="true"></iframe>
+                                    {% elif item.type == "PDF" %}
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item"
+                                            src="{{ url_for('static', filename=item.data) }}" allowfullscreen
+                                            width="960" height="749"></iframe>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

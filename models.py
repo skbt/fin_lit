@@ -162,6 +162,8 @@ class SubModules(db.Model):
     module_id = db.Column(db.Integer, db.ForeignKey('modules.id'))
     name = db.Column(db.String)
     desc = db.Column(db.String)
+    type = db.Column(db.Enum('PPT','PDF', 'IMG', 'VID'), nullable=False, server_default="PPT")
+    data = db.Column(db.TEXT)
 
     def insert(self):
         db.session.add(self)
