@@ -95,6 +95,17 @@ def logout():
         session.pop('broadcast_messages')
     return redirect(url_for('login_page'))
 
+@app.route('/course')
+def course():
+    if 'user' not in session:
+        return redirect(url_for('login_page'))
+    else:
+        return render_template('course.html')
+
+@app.route('/module/<int:module_id>')
+def module(module_id):
+    return render_template('module.html', module_id=module_id)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
  
