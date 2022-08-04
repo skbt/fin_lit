@@ -338,3 +338,31 @@ class ModuleQuiz(db.Model):
             'file_name': self.file_name,
             'type': self.type,
         }
+
+class Videos(db.Model):
+    __tablename__ = 'videos'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String)
+    description = db.Column(db.String)
+    file_name = db.Column(db.String)
+    cover = db.Column(db.String)
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'title': self.title,
+            'description': self.description,
+            'file_name': self.file_name,
+            'cover': self.cover,
+        }

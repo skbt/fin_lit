@@ -1,0 +1,73 @@
+{% extends 'base_w_header.html' %}
+{% set page = "videos" %}
+{% block title %}
+Fin Lit | Course
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<link href="https://vjs.zencdn.net/7.20.1/video-js.css" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Videos
+                    </h2>
+                    <div class="text-muted mt-1">{{ videos | length }} items</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="row">
+                {% for video in videos %}
+                <div class="col-lg-4">
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            <h3 class="card-title">{{ video.title }}</h3>
+                        </div>
+                        <div class="card-body">
+                            <video id="my-video" class="video-js" controls preload="auto" width="360" height="640"
+                                poster="{{ url_for('static', filename='videos') }}/{{ video.cover }}" data-setup="{}">
+                                <source src="{{ url_for('static', filename='videos') }}/{{ video.file_name }}"
+                                    type="video/mp4" />
+                                <p class="vjs-no-js">
+                                    To view this video please enable JavaScript, and consider upgrading to a
+                                    web browser that
+                                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5
+                                        video</a>
+                                </p>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://vjs.zencdn.net/7.20.1/video.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

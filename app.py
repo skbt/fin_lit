@@ -119,6 +119,10 @@ def workbook(id):
     quiz = ModuleQuiz.query.filter_by(id=id).first()
     return render_template(f'quiz/{quiz.file_name}.html', quiz=quiz)
 
+@app.route('/videos')
+def videos():
+    videos = Videos.query.all()
+    return render_template('videos.html', videos=videos)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
- 

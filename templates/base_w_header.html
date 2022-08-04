@@ -96,8 +96,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                             aria-label="Open user menu">
-                            <span class="avatar avatar-sm"
-                                style="background-image: url({{ session.user.dp }})"></span>
+                            <span class="avatar avatar-sm" style="background-image: url({{ session.user.dp }})"></span>
                             <div class="d-none d-xl-block ps-2">
                                 <div>{{ session.user.name }}</div>
                                 <div class="mt-1 small text-muted">{{ session.user.school }}</div>
@@ -131,22 +130,23 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="nav-item {{ 'active' if page == 'about' else '' }}">
-                                <a class="nav-link" href="#">
+                            <li class="nav-item {{ 'active' if page == 'videos' else '' }}">
+                                <a class="nav-link" href="/videos">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <!-- Download SVG icon from http://tabler-icons.io/i/home -->
                                         <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="icon icon-tabler icon-tabler-pentagon" width="24" height="24"
+                                            class="icon icon-tabler icon-tabler-video" width="24" height="24"
                                             viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
                                             stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <path
-                                                d="M13.2 3.394l7.033 5.237a2 2 0 0 1 .7 2.247l-2.973 8.764a2 2 0 0 1 -1.894 1.358h-8.12a2 2 0 0 1 -1.9 -1.373l-2.896 -8.765a2 2 0 0 1 .696 -2.225l6.958 -5.237a2 2 0 0 1 2.397 -.006z">
+                                                d="M15 10l4.553 -2.276a1 1 0 0 1 1.447 .894v6.764a1 1 0 0 1 -1.447 .894l-4.553 -2.276v-4z">
                                             </path>
+                                            <rect x="3" y="6" width="12" height="12" rx="2"></rect>
                                         </svg>
                                     </span>
                                     <span class="nav-link-title">
-                                        About
+                                        Videos
                                     </span>
                                 </a>
                             </li>
