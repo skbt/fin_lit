@@ -71,6 +71,22 @@ Fin Lit | Course
                     </div>
                 </div>
             </div>
+            <br>
+            <div class="row">
+                {% for quiz in quizzes %}
+                <div class="col">
+                    {% if quiz.type == "quiz" %}
+                    <a href="/quiz/{{ quiz.id }}" class="btn btn-outline-primary w-100" target="_blank">
+                        {{ quiz.name }}
+                    </a>
+                    {% else %}
+                    <a href="/workbook/{{ quiz.id }}" class="btn btn-outline-danger w-100" target="_blank">
+                        {{ quiz.name }}
+                    </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
 
         </div>
     </div>

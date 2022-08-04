@@ -1,0 +1,235 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Course
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Credit Card Offer Vocabulary
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="row">
+
+                <p>
+                    <strong>Step 1:</strong> Find and highlight each of the vocabulary words in the table below in the
+                    credit card offer provided. (8 points)
+                </p>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Vocabulary Words</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-muted">
+                                            Annual fee
+                                        </td>
+                                        <td class="text-muted">
+                                            Annual percentage rate (APR)
+                                        </td>
+                                        <td class="text-muted">
+                                            Balance transfers
+                                        </td>
+                                        <td class="text-muted">
+                                            Credit card
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-muted">
+                                            Credit limit
+                                        </td>
+                                        <td class="text-muted">
+                                            Introductory rate
+                                        </td>
+                                        <td class="text-muted">
+                                            Late payment fee
+                                        </td>
+                                        <td class="text-muted">
+                                            Over the limit fee
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-muted">
+                                            Penalty APR
+                                        </td>
+                                        <td class="text-muted">
+                                            Pre-approved
+                                        </td>
+                                        <td class="text-muted">
+                                            Return payment fee
+                                        </td>
+                                        <td class="text-muted">
+                                            Schumer Box
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-muted">
+                                            Variable-rate APR
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <p>
+                    <strong>Step 2:</strong> Review the highlighted words in the credit card offer. Which words are you
+                    not familiar with? Write six words that you are not familiar with in the first column of the table
+                    below. Using your information sheet, write the definition of each word in your own words in the
+                    second column. (8 points)
+                </p>
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table card-table table-vcenter text-nowrap">
+                                <thead>
+                                    <th>Word</th>
+                                    <th>Definition</th>
+                                    <th>Why this matters</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="form-control form-control-flush"
+                                                name="Form control flush" placeholder="Text..">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br>
+            <div class="row">
+                <p>
+                    <strong>Step 3:</strong> After instruction, complete column three by describing why it is important to understand each wordwhen evaluating a credit card offer.(8 points)
+                </p>
+                <textarea class="form-control" name="example-textarea" placeholder="Type here..."></textarea>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

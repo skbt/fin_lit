@@ -307,3 +307,31 @@ class CourseCompletion(db.Model):
             'user_id': self.user_id,
             'count': self.count,
         }
+
+class ModuleQuiz(db.Model):
+    __tablename__ = 'module_quiz'
+    id = db.Column(db.Integer, primary_key=True)
+    module_id = db.Column(db.Integer, db.ForeignKey('modules.id'))
+    name = db.Column(db.String)
+    file_name = db.Column(db.String)
+    type = db.Column(db.Enum('quiz','workbook'), nullable=False, server_default="quiz")
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'module_id': self.module_id,
+            'name': self.name,
+            'file_name': self.file_name,
+            'type': self.type,
+        }
