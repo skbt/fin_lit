@@ -1,3 +1,4 @@
+from email.mime import image
 from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
@@ -111,6 +112,7 @@ class Modules(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     desc= db.Column(db.String)
+    image = db.Column(db.String)
 
     def insert(self):
         db.session.add(self)
@@ -128,6 +130,7 @@ class Modules(db.Model):
             'id': self.id,
             'name': self.name,
             'description': self.desc,
+            'image': self.image,
         }
 
 class ModuleScore(db.Model):

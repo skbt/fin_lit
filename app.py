@@ -97,7 +97,8 @@ def logout():
 
 @app.route('/course')
 def course():
-    return render_template('course.html')
+    modules = Modules.query.all()
+    return render_template('course.html', modules=modules)
 
 @app.route('/modules/<int:module_id>')
 def module(module_id):
