@@ -25,11 +25,12 @@ Fin Lit | Home
         <div class="row h-99 align-items-center py-5 mt-3">
             <div class="col-lg-6">
                 <h1 class="display-4 text-primary">Welcome to Fin Lit</h1>
-                <p class="lead text-muted mb-0">This is a humble effort to make students financialy independent and improve their finance accumen.</p>
+                <p class="lead text-muted mb-0">This is a humble effort to make students financialy independent and
+                    improve their finance accumen.</p>
                 <a class="btn btn-primary btn-lg mt-3" href="{{ url_for('home') }}"></i>Start Course</a>
             </div>
-            <div class="col-lg-6 d-none d-lg-block"><img src="{{ url_for('static', filename='images/site/school.svg') }}"
-                    alt="" class="img-fluid">
+            <div class="col-lg-6 d-none d-lg-block"><img
+                    src="{{ url_for('static', filename='images/site/school.svg') }}" alt="" class="img-fluid">
             </div>
         </div>
     </div>
@@ -40,7 +41,9 @@ Fin Lit | Home
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 order-2 order-lg-1"><i class="fas fa-pen fa-2x mb-3 text-primary"></i>
                 <h2 class="font-weight-light">Watch</h2>
-                <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae odit molestias non, facere nobis perferendis similique, iste odio illum, possimus cum repudiandae aut dicta fugiat vitae id error voluptate nostrum..</p>
+                <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae
+                    odit molestias non, facere nobis perferendis similique, iste odio illum, possimus cum repudiandae
+                    aut dicta fugiat vitae id error voluptate nostrum..</p>
                 <a class="btn btn-primary mt-1" href="/videos"></i> Start Watching</a>
             </div>
             <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
@@ -52,7 +55,9 @@ Fin Lit | Home
                     alt="events" class="img-fluid mb-4 mb-lg-0"></div>
             <div class="col-lg-6"><i class="fas fa-calendar fa-2x mb-3 text-primary"></i>
                 <h2 class="font-weight-light">Learn</h2>
-                <p class="font-italic text-muted mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione esse quod corrupti odio voluptate molestias, reprehenderit eius laudantium nobis distinctio consequatur quidem recusandae odit sequi earum quibusdam animi porro architecto.</p>
+                <p class="font-italic text-muted mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                    esse quod corrupti odio voluptate molestias, reprehenderit eius laudantium nobis distinctio
+                    consequatur quidem recusandae odit sequi earum quibusdam animi porro architecto.</p>
                 <a class="btn btn-primary mt-1" href="/course"></i> See the modules</a>
             </div>
         </div>
@@ -60,11 +65,14 @@ Fin Lit | Home
         <div class="row align-items-center mb-5">
             <div class="col-lg-6 order-2 order-lg-1"><i class="fas fa-users fa-2x mb-3 text-primary"></i>
                 <h2 class="font-weight-light">Test</h2>
-                <p class="font-italic text-muted mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, rerum eius odit, ipsam ab recusandae autem veritatis similique facilis temporibus vero perspiciatis beatae consectetur ratione quas maxime nobis placeat porro.</p>
+                <p class="font-italic text-muted mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Praesentium, rerum eius odit, ipsam ab recusandae autem veritatis similique facilis temporibus vero
+                    perspiciatis beatae consectetur ratione quas maxime nobis placeat porro.</p>
                 <a class="btn btn-primary mt-1" href="#"></i> Take a test</a>
             </div>
             <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
-                    src="{{ url_for('static', filename='images/site/exam.svg') }}" alt="club" class="img-fluid mb-4 mb-lg-0">
+                    src="{{ url_for('static', filename='images/site/exam.svg') }}" alt="club"
+                    class="img-fluid mb-4 mb-lg-0">
             </div>
         </div>
         <div class="row align-items-center mb-5">
@@ -72,12 +80,37 @@ Fin Lit | Home
                     alt="trade" class="img-fluid mb-4 mb-lg-0"></div>
             <div class="col-lg-6"><i class="fas fa-shopping-cart fa-2x mb-3 text-primary"></i>
                 <h2 class="font-weight-light">Get Rewards</h2>
-                <p class="font-italic text-muted mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, quibusdam. Animi blanditiis provident aperiam nisi rerum possimus magnam vitae numquam ipsa doloremque nesciunt illo et facere alias temporibus, quibusdam harum!</p>
+                <p class="font-italic text-muted mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A,
+                    quibusdam. Animi blanditiis provident aperiam nisi rerum possimus magnam vitae numquam ipsa
+                    doloremque nesciunt illo et facere alias temporibus, quibusdam harum!</p>
                 <a class="btn btn-primary mt-1" href="#"></i> See rewards</a>
             </div>
         </div>
     </div>
 </div>
+
+<section id="clients" class="section-bg nav-color py-4 pb-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8">
+                <h3 class="display-6 text-primary font-weight-light">Acknowledgements</h3>
+                <p class="font-italic text-muted">Special thanks to</p>
+            </div>
+        </div>
+        <div class="row no-gutters clients-wrap clearfix wow fadeInUp"
+            style="visibility: visible; animation-name: fadeInUp;">
+            <div class="col-lg-3 offset-lg-2">
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/arizona.png') }}" class="img-fluid"
+                        alt="sfv-logo"> </div>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="client-logo"><img src="{{ url_for('static', filename='images/take_charge.png') }}" class="img-fluid"
+                        alt="sfv-logo"> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <div class="bg-white pt-0 pb-0">
     <div class="container py-5">
         <div class="row mb-4">
@@ -86,8 +119,119 @@ Fin Lit | Home
                 <p class="font-italic text-muted">This team worked day and night to develop this product</p>
             </div>
         </div>
-
         <div class="row text-center">
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body p-4 text-center">
+                        <span class="avatar avatar-xl mb-3 avatar-rounded"
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Amandeep Sing Dhaliwal</a></h3>
+                        <div class="text-muted">Program Developer</div>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#" class="card-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                            </svg>
+                            Instagram</a>
+                        <a href="#" class="card-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <line x1="8" y1="11" x2="8" y2="16"></line>
+                                <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                                <line x1="12" y1="16" x2="12" y2="11"></line>
+                                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                            </svg>
+                            LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End-->
+            <!-- Team item-->
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body p-4 text-center">
+                        <span class="avatar avatar-xl mb-3 avatar-rounded"
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Tabitha Andira Griffin</a></h3>
+                        <div class="text-muted">Program Analyst</div>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                            </svg>
+                            Instagram</a>
+                        <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/phone -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <line x1="8" y1="11" x2="8" y2="16"></line>
+                                <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                                <line x1="12" y1="16" x2="12" y2="11"></line>
+                                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                            </svg>
+                            LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End-->
+            <!-- Team item-->
+            <div class="col-lg-3">
+                <div class="card">
+                    <div class="card-body p-4 text-center">
+                        <span class="avatar avatar-xl mb-3 avatar-rounded"
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Nabeel Eusufzai</a></h3>
+                        <div class="text-muted">Content Creator</div>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="4"></rect>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501"></line>
+                            </svg>
+                            Instagram</a>
+                        <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/phone -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <line x1="8" y1="11" x2="8" y2="16"></line>
+                                <line x1="8" y1="8" x2="8" y2="8.01"></line>
+                                <line x1="12" y1="16" x2="12" y2="11"></line>
+                                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                            </svg>
+                            LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <!-- End-->
+            <!-- Team item-->
             <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body p-4 text-center">
@@ -98,6 +242,7 @@ Fin Lit | Home
                     </div>
                     <div class="d-flex">
                         <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/mail -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram"
                                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -108,6 +253,7 @@ Fin Lit | Home
                             </svg>
                             Instagram</a>
                         <a href="#" class="card-btn">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/phone -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin"
                                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -123,13 +269,12 @@ Fin Lit | Home
                 </div>
             </div>
             <!-- End-->
-             <!-- Team item-->
-             <div class="col-lg-3">
+            <div class="col-lg-3 mt-3">
                 <div class="card">
                     <div class="card-body p-4 text-center">
                         <span class="avatar avatar-xl mb-3 avatar-rounded"
-                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1648073981/banter/team/Aneesh_otdmky.jpg)"></span>
-                        <h3 class="m-0 mb-1"><a href="#">Aneesh Melkot</a></h3>
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Udhwani Lavin Baldev</a></h3>
                         <div class="text-muted">Developer</div>
                     </div>
                     <div class="d-flex">
@@ -160,14 +305,12 @@ Fin Lit | Home
                     </div>
                 </div>
             </div>
-            <!-- End-->
-             <!-- Team item-->
-             <div class="col-lg-3">
+            <div class="col-lg-3 mt-3">
                 <div class="card">
                     <div class="card-body p-4 text-center">
                         <span class="avatar avatar-xl mb-3 avatar-rounded"
-                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1648073981/banter/team/Aneesh_otdmky.jpg)"></span>
-                        <h3 class="m-0 mb-1"><a href="#">Aneesh Melkot</a></h3>
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Sufyan Ali Mohammed</a></h3>
                         <div class="text-muted">Developer</div>
                     </div>
                     <div class="d-flex">
@@ -198,14 +341,12 @@ Fin Lit | Home
                     </div>
                 </div>
             </div>
-            <!-- End-->
-             <!-- Team item-->
-             <div class="col-lg-3">
+            <div class="col-lg-3 mt-3">
                 <div class="card">
                     <div class="card-body p-4 text-center">
                         <span class="avatar avatar-xl mb-3 avatar-rounded"
-                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1648073981/banter/team/Aneesh_otdmky.jpg)"></span>
-                        <h3 class="m-0 mb-1"><a href="#">Aneesh Melkot</a></h3>
+                            style="background-image: url(https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png)"></span>
+                        <h3 class="m-0 mb-1"><a href="#">Shashank Ramesh Bhatia</a></h3>
                         <div class="text-muted">Developer</div>
                     </div>
                     <div class="d-flex">
@@ -236,8 +377,6 @@ Fin Lit | Home
                     </div>
                 </div>
             </div>
-            <!-- End-->
-
         </div>
     </div>
 </div>
