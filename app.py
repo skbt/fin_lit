@@ -45,7 +45,7 @@ def login_user():
             # print(f'User Roles ==> {roles}')
             session['user'] = user.format()
             flash('Welcome back, {}!'.format(session['user']['name']))
-            return redirect(url_for('home'))
+            return redirect(url_for('course'))
         else:
             flash('Incorrect username or password')
             return redirect(url_for('login_page'))
