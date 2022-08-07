@@ -112,7 +112,9 @@ CREATE TABLE IF NOT EXISTS `module_quiz` (
 INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUES
 	(1, 1, 'Introductory Quiz', 'quiz_1', 'quiz'),
 	(2, 1, 'Advance Quiz', 'quiz_2', 'quiz'),
-	(3, 1, 'Workbook', 'workbook_1', 'workbook');
+	(3, 1, 'Credit Card Vocabulary', 'workbook_1', 'workbook'),
+  (4, 1, 'Credit Card Statement', 'workbook_2', 'workbook'),
+  (5, 1, 'Credit Card Comparison', 'workbook_3', 'workbook');
 
 -- Dumping structure for table fin_lit.module_scores
 CREATE TABLE IF NOT EXISTS `module_scores` (
