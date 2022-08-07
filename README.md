@@ -30,7 +30,7 @@ Rename the `.env_example` file to `.env`.
 In PHPMyAdmin/XAMPP, create a new database and name it `fin_lit`.
 Copy the SQL from `fin_lit_prod.sql` and run it as a query in the new database on your local machine.
 
-## Running the server
+## Running the app
 
 From within the `project` directory first ensure you are working using your created virtual environment.
 
@@ -42,10 +42,3 @@ flask run
 ```
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
-
-### Running the App
-
-To run the sample, make sure you have `python` and `pip` installed.
-
-Run `pip install -r requirements.txt` to install the dependencies and run `python server.py`. 
-The app will be served at [http://localhost:3000/](http://localhost:3000/).
