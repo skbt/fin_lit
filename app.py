@@ -1,6 +1,7 @@
 import email
 from flask import (Flask, flash, jsonify, redirect, render_template, request,
                    send_file, session, url_for)
+from functools import wraps
 from dotenv import load_dotenv
 from numpy import roll
 from passlib.hash import pbkdf2_sha256 as sha256
@@ -14,6 +15,15 @@ INIT_DP = "https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY')
 db = db_init(app)
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if session['user']['role_id'] != 2:
+            flash('Not Authorized')
+            return redirect(url_for('home'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 @app.route('/')
 def home():
@@ -114,6 +124,52 @@ def quiz(id):
     quiz = ModuleQuiz.query.filter_by(id=id).first()
     return render_template(f'quiz/{quiz.file_name}.html', quiz=quiz)
 
+@app.route('/quiz/submit/<int:id>', methods=['POST'])
+def submit_quiz(id):
+    form_data = request.form.to_dict()
+    print(form_data)
+    try:
+        match id:
+            case 1:
+                print("Yeah")
+                new_response = Quiz1(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
+        return redirect(request.referrer)
+    except Exception as e:
+        print(f'Error ==> {e}')
+        flash('Something went wrong!')
+        return redirect(request.referrer)
+
+@app.route('/quiz/grade/<int:id>')
+def grade_quiz(id):
+    quiz = ModuleQuiz.query.filter_by(id=id).first()
+    match id:
+        case 1:
+            quiz_responses = Quiz1
+        # Other cases for other quizzes
+        case other:
+            flash("Invalid")
+            return redirect(request.referrer)
+    responses = quiz_responses.query.all()
+    return render_template(f'admin/quiz_{id}_grade.html', quiz=quiz, responses=responses)
+
+@app.route('/quiz/score/<int:id>', methods=['POST'])
+def score_quiz(id):
+    form_data = request.form.to_dict()
+    try:
+        match id:
+            case 1:
+                print("Yeah")
+                quiz = Quiz1
+        quiz_obj = quiz.query.filter_by(id=id).first()
+        quiz_obj.score = form_data['score']
+        quiz_obj.update()
+        return redirect(request.referrer)
+    except Exception as e:
+        print(f'Error ==> {e}')
+        flash('Something went wrong!')
+        return redirect(request.referrer)
+
 @app.route('/workbook/<id>')
 def workbook(id):
     quiz = ModuleQuiz.query.filter_by(id=id).first()
@@ -123,6 +179,13 @@ def workbook(id):
 def videos():
     videos = Videos.query.all()
     return render_template('videos.html', videos=videos)
+
+@app.route('/admin')
+@requires_auth
+def admin():
+    user_count = User.query.count()
+    quizzes = ModuleQuiz.query.all()
+    return render_template('admin/admin.html', quizzes=quizzes, user_count=user_count)
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

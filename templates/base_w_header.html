@@ -104,6 +104,9 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <a href="#" class="dropdown-item">Profile & account</a>
+                            {% if session.user.role_id == 2 %}
+                            <a href="/admin" class="dropdown-item">Instructor Portal</a>
+                            {% endif %}
                             <div class="dropdown-divider"></div>
                             <a href="/logout" class="dropdown-item">Logout</a>
                         </div>

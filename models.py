@@ -39,6 +39,8 @@ class User(db.Model):
     phone = db.Column(db.String)
     dp = db.Column(db.String)
 
+    quiz_1 = db.relationship('Quiz1', backref='user', lazy=True)
+
     def insert(self):
         db.session.add(self)
         db.session.commit()
@@ -59,6 +61,7 @@ class User(db.Model):
             'major': self.phone,
             'phone': self.phone,
             'dp': self.dp,
+            'role_id': self.role_id
         }
 
 class Roles(db.Model):
@@ -113,6 +116,8 @@ class Modules(db.Model):
     name = db.Column(db.String)
     desc= db.Column(db.String)
     image = db.Column(db.String)
+
+    quizzes = db.relationship('ModuleQuiz', backref='quiz')
 
     def insert(self):
         db.session.add(self)
@@ -319,6 +324,8 @@ class ModuleQuiz(db.Model):
     file_name = db.Column(db.String)
     type = db.Column(db.Enum('quiz','workbook'), nullable=False, server_default="quiz")
 
+    module = db.relationship('Modules', back_populates='quizzes')
+
     def insert(self):
         db.session.add(self)
         db.session.commit()
@@ -365,4 +372,52 @@ class Videos(db.Model):
             'description': self.description,
             'file_name': self.file_name,
             'cover': self.cover,
+        }
+
+class Quiz1(db.Model):
+    __tablename__ = 'quiz_1'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1 = db.Column(db.String)
+    q2 = db.Column(db.String)
+    q3 = db.Column(db.String)
+    q4 = db.Column(db.String)
+    q5 = db.Column(db.String)
+    q6 = db.Column(db.String)
+    q7 = db.Column(db.String)
+    q8 = db.Column(db.String)
+    q9 = db.Column(db.String)
+    q10 = db.Column(db.String)
+    q11 = db.Column(db.String)
+    q12 = db.Column(db.String)
+    q13 = db.Column(db.String)
+    q14 = db.Column(db.String)
+    q15 = db.Column(db.String)
+    q16 = db.Column(db.String)
+    q17 = db.Column(db.String)
+    q18 = db.Column(db.String)
+    q19 = db.Column(db.String)
+    q20 = db.Column(db.String)
+    q21 = db.Column(db.String)
+    q22 = db.Column(db.String)
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_1')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
         }
