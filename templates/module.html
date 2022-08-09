@@ -73,6 +73,8 @@ Fin Lit | Course
             </div>
             <br>
             <div class="row">
+                <p><strong class="text-blue">Quizzes</strong> are mandatory. <strong
+                        class="text-danger">Workbooks</strong> are optional.</p>
                 {% for quiz in quizzes %}
                 <div class="col">
                     {% if quiz.type == "quiz" %}
@@ -87,7 +89,6 @@ Fin Lit | Course
                 </div>
                 {% endfor %}
             </div>
-
         </div>
     </div>
 
