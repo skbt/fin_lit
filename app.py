@@ -115,9 +115,10 @@ def module(module_id):
     if 'user' not in session:
         flash('Please login to start the course!')
         return redirect(request.referrer)
+    module = Modules.query.filter_by(id=module_id).first()
     submodules = SubModules.query.filter_by(module_id=module_id).all()
     quizzes = ModuleQuiz.query.filter_by(module_id=module_id).all()
-    return render_template('module.html', module_id=module_id, submodules=submodules, quizzes=quizzes)
+    return render_template('module.html', module=module, submodules=submodules, quizzes=quizzes)
 
 @app.route('/quiz/<id>')
 def quiz(id):
