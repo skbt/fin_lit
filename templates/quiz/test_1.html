@@ -1,0 +1,901 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Quiz
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Spending Unit Multiple Choice Test Bank 
+                    </h2>
+                    <div class="text-muted mt-1">Credit Reports and Scores </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <form action="/quiz/submit/1" method="post">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ol>
+                            <p><strong>Directions:</strong> Spending Unit Multiple Choice Test Bank 
+                                <strong>(1
+                                    point
+                                    each)</strong></p>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">When may a person view his/her credit report for free?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">At any time and an unlimited number of times </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Once a year, from each of the three main credit reporting agencies </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">A person may not review his/her credit report </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">If a person has sufficient financial resources </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">When Bryce attempted to borrow money at the bank, he learned that his credit score is low. Which statement best describes what this is likely to mean for Bryce?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q1" type="radio" /> <span class="form-check-label">The interest rates on his loan will be lower, since his credit score is low. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q1" type="radio" /><span class="form-check-label">The purchase price of the item he needs the loan for will be higher due to his low credit score. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q1" type="radio" /><span class="form-check-label">The monthly loan payments will be lower due to his lower credit score. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q1" type="radio" /><span class="form-check-label">The interest rates on his loan will be higher, since his credit score is low. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Jenny is 18‐years‐old and has applied for credit for the first time. Her credit application was declined because she has no credit history. What would you recommend Jenny do to begin to build a positive credit history?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Jenny should acquire several credit cards to establish that she can manage them responsibly. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Jenny should obtain a secured credit card. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">Jenny should re‐apply for the same credit but include a letter of recommendation from someone who knows her well and can vouch for her character. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">Jenny should apply for a different type of credit. Since she was applying for a bank loan, she should apply for a credit card. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Jake’s credit application has been declined because of his negative credit history. Which statement is most likely to be true?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Jake pays his bills consistently and on time. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Jake has applied for 4 credit cards and a car loan in the past 6‐weeks. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Jake has received 3 traffic tickets in the past 2 months. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Jake holds 2 store credit cards, a bank credit card, a car loan, and a mortgage </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Which of the following is NOT included in an individual’s credit report?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Current and past addresses </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Account balances </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Bankruptcies and foreclosures </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Medical information </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Edward wants to develop a positive credit history. How should he do this?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Maintain reasonable amounts of available credit </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Have one type of credit account </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Pay cash for the majority of purchases </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Open credit accounts in his parents’ names Credit Basics </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Evan is writing a scholarship essay about the importance of responsible money management. He wants to explain the meaning of borrowing. Which statement below would explain the importance of understanding the process of
+                                                        borrowing money?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">When you are borrowing, you are spending future income. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Borrowing is an important part of a responsible financial plan. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Borrowing strongly affects the present self but has less impact on the future self. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Borrowing builds a strong credit history because it requires individuals to file a credit report. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">The financial counselor that Ariel consulted about her use of credit recommended that she keep her use of credit within safe boundaries. Ariel’s financial counselor most likely told her to:</div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Keep the total amount of money she has borrowed, including her mortgage and her car loan, under 20% of her net income. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Keep the total amount of money she has borrowed, including her mortgage and her car loan, under 40% of her net income. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Keep the total amount of money she has borrowed, not including her house, under 20% of her net income. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Keep the total amount of money she has borrowed, not including her house, under 40% of her net income. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">David earns $5000 per month at his accounting job. He has a student loan payment of $120, a car loan of $300. Which statement is true?</div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">David’s total credit payments are higher than the recommended amount for someone earning his income. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">David’s student loan payment must be subtracted from his car loan payment to determine whether his overall credit payments are within the safe range. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">David’s student loan payment is within the safe range but his car loan is not. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">David’s credit payments are within the safe range for someone with his income. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">To answer the essay test question about the meaning of open‐end credit, Ryan should include which statement?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">A down payment must be made before receiving a loan. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Individuals are allowed to borrow an unlimited amount of money as long as they pay it back </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Credit is extended in advance so the borrower does not have to apply for credit each time credit is desired. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Payments are equal and required to be paid on a regular basis. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Leah is trying to explain the difference between open‐end and closed‐end credit to her roommate. Which statement should she include in her description of closed‐end credit?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">It is a continuous loan the borrower must repay with a revolving balance. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Equal payments are required on a regular basis until the loan is repaid. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Credit limits vary depending on the loan balance. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Interest rates vary depending on the repayment history. Understanding a Credit Card </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Sarah will turn 18 next month. She plans to apply for a credit card. Which statement is true?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Sarah cannot obtain a credit card until she turns 21. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Sarah will need to use a special application since she is under 25. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Sarah can only obtain a credit card if she has a co‐signer or proof of sufficient income to make the required payments. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Sarah can obtain a credit card by filling out an application as long as she waits until after her 18th birthday. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Tyler is trying to be responsible in using his new credit card and has heard there is a way to avoid paying interest on the things he charges. How can he LEGALLY avoid paying interest when using his credit card?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Tyler needs to make sure he pays the minimum balance every month before the due date on the credit card statement. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Tyler needs to pay the credit card balance in full every month before the due date listed on the credit card statement. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Tyler needs to limit the use of his credit cards to balance transfers only. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">
+                                                                Tyler needs to understand that the use of a credit card requires paying interest. There is not legal way for him to avoid paying interest if he uses his card during the billing cycle.
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Paying the minimum payment on a credit card every month will:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">pay a large percentage of the total balance owed every month </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">make the final amount paid substantially higher than the amount initially charged to the card </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">help the cardholder create a plan for paying off a credit card in a decent amount of time </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">allow the cardholder to avoid paying any interest charges </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Megan’s credit card statement indicates that she is now paying a Penalty APR. Which scenario best describes what may have happened?</div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">
+                                                                When Megan was participating in her college’s Study Abroad program, she left a friend in charge of sending in her January and February payments. Her friend forgot to send the payments.
+                                                            </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Megan’s credit card payment has been paid in full each of the last 6 months. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">Megan’s card had a lower introductory interest rate for the first year and now the interest rate has increased, as stated on her contract. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">
+                                                                The new computer Megan purchased made her account go over the credit limit for 1 week, until the credit card company processed her credit card statement. Protecting Yourself from Fraud
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Which of the following is an act of identity theft?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Receiving permission to use a parent’s credit card for school clothes </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Wrongfully acquiring and using someone’s personal identification </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Taking the identity of another individual as inspiration for a costume </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Having the same name as another person </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Carson’s wallet with his driver’s license, a debit card and his credit card has been stolen. Which of the following is NOT something an identity thief might realistically do with this information?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Rent an apartment under Carson’s name </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Use Carson’s name during an arrest </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Make purchases with Carson’s credit card </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Take a college admissions exam in Carson’s name. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Ashley plans to do some of her Christmas shopping online. What is a safety tip to follow when she is shopping online?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Shred all sales receipts as soon as the item purchased has been received </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Use a debit card </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Use a credit card </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Black out the bank account numbers on the credit card bill before returning it with payment. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Matt wants to guard his personal information. Which personal information is LEAST LIKELY to be used by scammers?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Phone numbers </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Credit card numbers </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Bank account numbers </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Driver’s license numbers </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Charis wants to decrease the risk of fraudulent use of her credit cards. Which strategy would be the most effective?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Carrying all credit cards in her wallet so they don’t get lost </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Signing the back of her card with her signature and “Please see picture ID” </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Giving account numbers over the internet rather than over the phone </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Using credit cards for all her purchases so she only needs to pay one bill each month </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Which is a general rule to minimize identity theft when dealing with credit reports?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Check each credit report at least once per year. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Wait 60 days before disputing any wrong information found in a credit report or on a credit card statement. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Keep credit reports in an easily accessible location, so information can be accessed if fraud occurs </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Report mistakes to only one credit reporting agency and they will inform the others </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Which of the following actions will not make an individual vulnerable to identity theft?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Using a computer without updated spyware </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Responding to an email from your depository institution </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Paying cash for a movie ticket </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Throwing mail in the garbage Types of Insurance </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Which of the following best describes the benefits of having insurance?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">The policyholder may become better off financially if an accident occurs </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Insurance combined with emergency savings provides a sense of financial security and peace of mind </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">The policyholder no longer has to worry about paying for financial losses resulting from an accident because all risk of financial loss is transferred to the insurance company </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">It is required by law to purchase insurance so the benefits do not matter </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Maggie will need to pay $120 per month in order to purchase a health insurance policy. This monthly payment is known as the:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">deductible </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">co‐insurance </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">premium </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">moral hazard </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Insurance can be purchased to protect one from which of the following losses?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Stock market losses </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Health care expenses </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Maintaining the price of your home </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Car maintenance </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Tiffany was recently involved in a vehicle accident. In order to get her car fixed, her insurance company is requiring her to pay the first $500 of the repair bill because:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">she did not call her agent and report the accident quickly enough </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">her policy's deductible is $500 </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">she will be reimbursed by the insurance company later </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">the cost of the repairs is higher than her policy covers </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        James received his first medical bill of the year. It was a total of $1000. His health insurance policy has a $500 deductible and a 20% co‐insurance. How much of the medical bill will Jade be responsible to pay?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">$0, insurance will cover the entire medical bill </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">$500 </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">$600 </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">$700 </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">As part of Nicholas’ new job, his employers will provide health, life, and disability insurance. Access to this insurance is provided in addition to his regular salary. This is known as:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">government programs </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">household production </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">coverage </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">employee benefits </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">If a person drives an automobile, they are required by law to have Automobile Liability Insurance. In which situation would this type of policy protect the policyholder?</div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">James hit a deer while driving to work on a foggy morning, killing the deer and causing $2000 in damage to his car. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">James backed into a vehicle in the grocery store parking lot and caused $2000 in damages to his own car and $3000 in damages to the other vehicle. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">An uninsured driver ran a stoplight, hit James’ car, and caused $2000 in damages to James’ car and $3000 in damage to his own vehicle. </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">James’ car was in the parking lot at work during a severe hailstorm where $2000 damage was done to his vehicle. </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Eric has chosen Amanda to be the beneficiary of his life insurance policy. What does this mean for Amanda?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Amanda must pay the insurance premiums to keep the policy in effect. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Amanda will receive any proceeds if Eric dies </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Amanda will receive a commission for selling Eric his life insurance policy. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Amanda is required to serve as the executor of Eric’s estate. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">It is recommended that life insurance be purchased when the:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">individual reaches the age of 50 </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">individual flies in an airplane </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">individual gets their first job </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">individual has dependents </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">What is the difference between property and liability insurance?</div>
+                                                    <div>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Property insurance pays for loss to the insured person whereas liability insurance pays for loss to other people </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Property insurance pays for loss to other people whereas liability insurance pays for loss to the insured person </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">The difference between property and liability insurance depends on the specific insurance policy purchased </span>
+                                                        </label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">The difference between property and liability insurance depends on whether automobile, homeowners, or renters insurance is purchased </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Patty recently moved into a new apartment with her friend Emma. Who is responsible for purchasing renter’s insurance?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">The property manager </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Patty and Emma’s parents </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Patty and Emma </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Renters insurance is not necessary Smart Consumer Spending </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">What is NOT an example of a durable good?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Automobile </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Cell phone </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Food </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Clothing </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Perry would like to purchase a new car. What should he consider first in the planned buying process?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Research different sellers to determine where to purchase the car from </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Evaluate the opportunity cost and trade‐offs to purchasing the car </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Rank product features in order of importance </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Calculate the cost of ownership </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Sally is researching a new tablet and conducting research using a variety of sources. What is an example of an unbiased source?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Product review from a seller </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Product review from an individual making money from the sale </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">A product review that is five years old </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">A product review from an independent company </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Why is investing in product research an important part of the planned buying process?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Research enhances satisfaction </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Research decreases satisfaction </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Research is too time consuming </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Research is only necessary for big purchases </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Paxten is purchasing a new phone online. What is the best tip he should consider to do so safely and maximize his satisfaction?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Use a debit card </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Always use the seller offering the lowest price </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Review shipping and return policies in advance </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Purchase a warranty Major Expenditures </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">In which scenario below should renters insurance be considered?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Steve and Teri have purchased a home in a rural area. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">
+                                                                Tim and Hanna are living with his parents in the basement of their home for six months while flood damage is being repaired in their home. They are paying his parents rent during the time they are living in their
+                                                                home.
+                                                            </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Zach and Leah have rented an apartment in an urban area. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Don and Denise are landlords for several rental properties. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">A rental agreement is often referred to as:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">a lease </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">an amenity </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">renters insurance </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">a mortgage </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Chad has decided to rent an apartment and is gathering information to be sure he has enough money saved for all his move‐in expenses. His landlord explained to him that he would need to pay a fee to cover any potential
+                                                        damages that might occur while Chad is living in the apartment. This fee is called the:
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">rental agreement </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">down payment </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">amenities </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">security deposit </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Rent is defined as:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">the cost of using someone else’s property </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">the fee charged for performing property management tasks </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">an advance payment for costs beyond normal wear and tear </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">the purchase price of a housing unit </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">The equity that you build by making mortgage payments is:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">the value of the home after the mortgage debt is subtracted </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">purchasing a housing unit as rental property </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">a home loan where the real estate is collateral </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">the amount of money paid on the home at the time of purchase </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Alyssa is considering purchasing a car and wants to be sure she can afford to drive it during the school year when she doesn’t have a job. Which expense WOULD NOT be considered part of the total transportation expenses?
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Automobile payment </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Fuel </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Parking </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Depreciation </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Brett borrowed money to purchase a vehicle without making a down payment and now he owes more on the vehicle than it is worth. This situation is referred to as:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">depreciation </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">being upside down on the loan </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">leasing </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">a hidden cost </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">Melissa needs a vehicle and is considering leasing one. This means:</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">She would be purchasing the vehicle by making payments over time. </span></label>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" name="q2" type="radio" />
+                                                            <span class="form-check-label">She would be renting the vehicle by making payments over time, although the vehicle title would remain with the lease grantor. </span>
+                                                        </label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Her depreciation costs will likely be higher. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">She will need to pay a larger down payment to offset the lease agreement fees. </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">When making food decisions, which of the following is most likely to be least expensive?</div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">Convenience foods </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Fast food restaurants </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Ready‐to‐eat foods </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Full‐service restaurants </span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="mb-3">
+                                                    <div class="form-label">
+                                                        Shelby is working on her spending plan and would like to spend less on her food for 6 months as she saves toward purchasing a more reliable vehicle. As she makes her plan, which factor would be least important to
+                                                        consider:
+                                                    </div>
+                                                    <div>
+                                                        <label class="form-check"> <input class="form-check-input" name="q2" type="radio" /> <span class="form-check-label">How much time she has available to prepare food. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">The skills she has acquired for preparing meals. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">The nutritional value of the foods she purchases. </span></label>
+                                                        <label class="form-check"><input class="form-check-input" name="q2" type="radio" /><span class="form-check-label">Her personal preferences</span></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                            <br>
+                
+                        </ol>
+                    </div>
+                   
+                    
+                </div>
+                <button type="submit" class="btn btn-outline-danger w-100">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
