@@ -115,7 +115,8 @@ INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUE
 	(3, 1, 'Credit Card Vocabulary', 'workbook_1', 'workbook'),
   (4, 1, 'Credit Card Statement', 'workbook_2', 'workbook'),
   (5, 2, 'Major Expenditure Test', 'test_1', 'quiz'),
-  (6, 2, 'Food Reinforcement', 'quiz_5', 'quiz');
+  (6, 2, 'Finding A Rental', 'quiz_4', 'quiz');
+  (7, 2, 'Food Reinforcement', 'quiz_5', 'quiz');
 
 -- Dumping structure for table fin_lit.module_scores
 CREATE TABLE IF NOT EXISTS `module_scores` (
