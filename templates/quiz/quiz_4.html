@@ -1,0 +1,299 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Course
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Finding a Rental
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="row">
+                        <p><strong>Scenario:</strong> You are searching for your first apartment. After reviewing your spending plan, you estimate that you have up to $650 per month available for your total housing expenses. Remember that a recommended payment is under 20%, furnishing and equipment are 3.3%, utilities 6.4% and household operations and supplies make up the remaining housing allotment.</p>
+                    </div>
+                    <br>
+                    <div class="row">    
+                        <p><strong>Directions:</strong> Review rental advertisements, and identify two properties that you feel are a good fit for your needs, wants and spending plan.</p>
+                    </div>
+                    <ol>
+                        <li>
+                            <div class="row">
+                                <p>Rank, in order of importance, 5 features you would look for in a rental. (5 points)</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p>Most Important</p> 
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <p>Least Important</p>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" name="example-text-input" placeholder="Input placeholder"> <br>
+                                    <input type="text" class="form-control" name="example-text-input" placeholder="Input placeholder"> <br>
+                                    <input type="text" class="form-control" name="example-text-input" placeholder="Input placeholder"> <br>
+                                    <input type="text" class="form-control" name="example-text-input" placeholder="Input placeholder"> <br>
+                                    <input type="text" class="form-control" name="example-text-input" placeholder="Input placeholder"> <br>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                    <p>
+                                        Review rental advertisements and identify two properties that are a good fit for you. Compare those properties using the chart below. If the information is not provided in the announcement, indicate “not included.” (10 points for completion)
+                                    </p>
+                            </div>
+                            <div class="row">
+                            
+
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                                <thead>
+                                                    <tr>
+                                                        <td class="text-muted">
+                                                            <p></p>
+                                                        </td>
+                                                        <td class="text-muted">
+                                                            <strong>
+                                                                <centre>
+                                                                    <p>Advertisement #1</p>
+                                                                </centre>
+                                                            </strong>
+                                                        </td>
+                                                        <td class="text-muted">
+                                                            <strong>
+                                                                <centre>
+                                                                    <p>Advertisement #2</p>
+                                                                </centre>
+                                                            </strong>
+                                                        </td>
+                                                    </tr>
+                                                    <thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Date advertisement posted:
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Source: 
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Address: 
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Rent:
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Initial expenses:
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                What categories must be planned for in a spending plan?
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Policies:
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Advantages of the property include:
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                        </tr>
+                
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                Disadvantages of the property include:                                                            
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <textarea class="form-control" name="example-textarea"
+                                                                    placeholder="Type here..."></textarea>
+                                                                </td>
+                                                        </tr>
+                                                       
+                                                    </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <div class="row">
+                                <p>
+                                    Describe, using at least three reasons, which rental is the best fit for you. (3 points)
+                                </p>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" name="example-textarea" placeholder="Type here..."></textarea>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <div class="row">
+                                <p>
+                                    What are five questions you would ask the landlord about your preferred property? (5 points)                                
+                                </p>
+                            </div>
+                            <div class="row">
+                                <textarea class="form-control" name="example-textarea" placeholder="Type here..."></textarea>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <div class="row">
+                                <p>
+                                    What are three things you would look for in a rental agreement about your preferred property? (3 points)
+                                </p>
+                                </div>
+                            <div class="row">
+                                <textarea class="form-control" name="example-textarea" placeholder="Type here..."></textarea>
+                            </div>
+                        </li>
+                        <br>
+                        <li>
+                            <div class="row">
+                                <p>
+                                    What are two things you can do to be an ideal candidate on a rental application and tenant? (2 points)
+                                </p>
+                                </div>
+                            <div class="row">
+                                <textarea class="form-control" name="example-textarea" placeholder="Type here..."></textarea>
+                            </div>
+                        </li>
+
+
+                       
+                    </ol>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
