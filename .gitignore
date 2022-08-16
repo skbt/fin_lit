@@ -12,3 +12,4 @@ nimblebuy_test
 .pytest_cache/
 static/images/dp/1001750503.jpg
 static/images/dp/1001859014.jpg
+.venv

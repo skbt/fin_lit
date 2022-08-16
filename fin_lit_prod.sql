@@ -115,8 +115,9 @@ INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUE
 	(3, 1, 'Credit Card Vocabulary', 'workbook_1', 'workbook'),
   (4, 1, 'Credit Card Statement', 'workbook_2', 'workbook'),
   (5, 2, 'Major Expenditure Test', 'test_1', 'quiz'),
-  (6, 2, 'Finding A Rental', 'quiz_4', 'quiz');
-  (7, 2, 'Food Reinforcement', 'quiz_5', 'quiz');
+  (6, 2, 'Finding A Rental', 'quiz_4', 'quiz'),
+  (7, 2, 'Food Reinforcement', 'quiz_5', 'quiz'),
+  (8, 2, 'Eating on a Budget', 'workbook_2_1', 'workbook');
 
 -- Dumping structure for table fin_lit.module_scores
 CREATE TABLE IF NOT EXISTS `module_scores` (
@@ -215,6 +216,7 @@ INSERT INTO `users` (`id`, `name`, `school`, `email`, `password`, `role_id`, `dp
 	('1001773798', 'Nabeel Eusufzai', 'University of Texas at Arlington', '', '$pbkdf2-sha256$29000$vPee837v/X9vzZmT8l5r7Q$RmFVFRtDBoR6nwkh/HAzoENzpj8AgWCJkRqh50of/JA', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
 	('1001860116', 'Tabitha Griffin', 'University of Texas at Arlington ', '', '$pbkdf2-sha256$29000$XisFYKxVCuFci/Fea40RAg$Y6BwRZBqjGwhsT0vTlvHzGzqGfGiGHAH0KR5Yg2wDVc', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
 	('100188', 'Lavin', 'University of Texas at Arlington ', '', '$pbkdf2-sha256$29000$ovQ.R4iRMmYsZcxZ6z1HaA$qm38AGregCny.04IJcjqO70mSog1YnAq/9QXJGmVMhk', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', '');
+	('101', 'Shashank', 'UTA ', '', '$pbkdf2-sha256$29000$rtX6fy8FwDhHCMF4L0VIiQ$WK9/WBjK.E/XxwDoS0WqUCibKmUfuxLqv.CzJ3Ld6nQ', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', '');
 
 -- Dumping structure for table fin_lit.videos
 CREATE TABLE IF NOT EXISTS `videos` (
