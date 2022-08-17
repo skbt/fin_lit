@@ -1,0 +1,609 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Quiz
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Eating on Budget
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <form action="/quiz/submit/1" method="post">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-12">
+                        
+                            <p><strong>Scenario:</strong> Joleen is a college student living in an apartment. She is trying to keep the food portion of her spending
+                                plan at $30 a week. She plans to eat 3 meals daily with one small snack. She would like to eat out once a week if
+                                possible.
+                            </p>
+                            <br>
+                            <p> Her refrigerator and pantry includes following items:</p>
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> ½ pound deli sliced ham </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> 3 eggs </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> 2 Oranges </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> 1 can of the soup </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> 1 box of mac and cheese </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> 1 Banana </p>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> 4 Slices Bed </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Ketchup </p>
+                                                            </td>
+                                                        </tr>
+
+
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> 1 Tomato </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Ranch Dressing </p>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> 2 slices of cheese </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Variety of staples (butter, sugar, miracle whip, cooking
+                                                                    spices) </p>
+                                                            </td>
+                                                        </tr>
+
+                                                    </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+
+
+
+                            <p>The weekly ad lists the following sale items.</p>
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                                <thead>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> Item </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Quantity </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Cost </p>
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <p> Item </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Quantity </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Cost </p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Cheerios </span></label>
+                                                            </td>
+                                                            <td>Box</td>
+                                                            <td>$2.50</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hashbrowns </span></label>
+                                                            </td>
+                                                            <td>32 oz</td>
+                                                            <td>$2.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Strawberries </span></label>
+                                                            </td>
+                                                            <td>1 lb</td>
+                                                            <td>$2.00</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Orange Juice </span></label>
+                                                            </td>
+                                                            <td>½ Gallon</td>
+                                                            <td>$2.99</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Rib Steak </span></label>
+                                                            </td>
+                                                            <td>1 lb</td>
+                                                            <td>$5.99</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Green Beans </span></label>
+                                                            </td>
+                                                            <td>12 oz</td>
+                                                            <td>$2.49</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Red Peppers </span></label>
+                                                            </td>
+                                                            <td>Each</td>
+                                                            <td>$1.50</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Baby Carrots </span></label>
+                                                            </td>
+                                                            <td>Bag</td>
+                                                            <td>$0.99</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Shredded Cheddar </span></label>
+                                                            </td>
+                                                            <td>8 oz</td>
+                                                            <td>$1.50</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Yogurt </span></label>
+                                                            </td>
+                                                            <td>6 oz</td>
+                                                            <td>$0.50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pork and Beans </span></label>
+                                                            </td>
+                                                            <td>can</td>
+                                                            <td>$0.79</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Chips </span></label>
+                                                            </td>
+                                                            <td>bag</td>
+                                                            <td>$3.99</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Rice Roni </span></label>
+                                                            </td>
+                                                            <td>Box</td>
+                                                            <td>$1.00</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pancake Mix </span></label>
+                                                            </td>
+                                                            <td>Box</td>
+                                                            <td>$2.69</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pasta </span></label>
+                                                            </td>
+                                                            <td>Bag</td>
+                                                            <td>$0.99</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pasta Sauce </span></label>
+                                                            </td>
+                                                            <td>Jar</td>
+                                                            <td>$1.79</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Chicken </span></label>
+                                                            </td>
+                                                            <td>can</td>
+                                                            <td>$2.00</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> SpaghettiOs® </span></label>
+                                                            </td>
+                                                            <td>can</td>
+                                                            <td>$0.89</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hot Pockets </span></label>
+                                                            </td>
+                                                            <td>Box</td>
+                                                            <td>$2.00</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pizza </span></label>
+                                                            </td>
+                                                            <td>Box</td>
+                                                            <td>$3.50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Frozen Vegetable </span></label>
+                                                            </td>
+                                                            <td>Bag</td>
+                                                            <td>$1.50</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Bread </span></label>
+                                                            </td>
+                                                            <td>Loaf</td>
+                                                            <td>$1.48</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Eggs </span></label>
+                                                            </td>
+                                                            <td>1 dozen</td>
+                                                            <td>$2.39</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Apple </span></label>
+                                                            </td>
+                                                            <td>1 lb</td>
+                                                            <td>$1.79</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Fresh Spinach </span></label>
+                                                            </td>
+                                                            <td>16 oz</td>
+                                                            <td>$2.45</td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hamburger </span></label>
+                                                            </td>
+                                                            <td>1 lb</td>
+                                                            <td>$2.75</td>
+                                                        </tr>                                                        
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+
+                            <p> Other items (up to 8)  
+                            </p>
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                                <thead>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <p> Item </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Quantity </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Cost </p>
+                                                            </td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <p> Item </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Quantity </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Cost </p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td></td>
+                                                            <td class="text-muted">
+                                                                <label class="form-check mb-2">
+                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
+                                                                </label>
+                                                            </td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
+                                                        </tr>
+                                                        
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="row">
+                            <strong>Step 1: Create the Menu </strong>(20 points for completion)
+                            Help Joleen develop a meal plan for one week. Remember, her goal is to spend no more than $30 on groceries!
+                            For each meal, indicate the food needed such as spaghetti (pasta, hamburger, sauce), apple and slice of bread.  
+                            When developing her meal plan, keep the following in mind:
+                                <ol>
+                                    <li> Use what she already has in her refrigerator and pantry (assume she has non‐perishable staple items)</li>
+                                    <li> Up to eight items, in addition to the weekly ad of sale items may be purchased.  </li>
+                                    <li> Leftovers can be used </li>
+                                    <li> Some items have enough quantity to be used for multiple meals</li>
+                                    <li> Create well balanced meals high in nutrition</li>
+                                </ol>
+                            </div>    
+
+                            <br>
+
+
+
+                            <div class="row">
+                                <div class="card">
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table card-table table-vcenter text-nowrap datatable">
+                                                <thead>
+                                                        <tr>
+                                                            <td class="text-muted">
+                                                               
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Breakfast </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Lunch </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Dinner </p>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <p> Snack </p>
+                                                            </td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr><td class="text-muted">   Monday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Tuesdayday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Wednesday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Thursday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Friday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Saturday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                        <tr><td class="text-muted">   Sunday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
+                                                         
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <br>
+
+                            <div class="row">
+                                <strong> Step 2: Create a Grocery List and Evaluate the Budget</strong>
+                                Use the menu plan to create a grocery list by placing a check mark next to all items on page 1 that will be
+                                used. (5 points for completion)
+                                <ol>
+                                    <li> Determine the price of items not on the grocery list using a website such as Instacart or visiting a local grocery
+                                    store. (5 points for completion)</li>
+                                    <li> Calculate the total cost of the grocery list:____________________ (1 point) </li>
+                                </ol>
+                                <input type="text" class="form-control" name="example-text-input" />
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <strong>Step 3: Reflection</strong>
+                            </div>
+                            <br>
+                            <ol>
+                                <li>
+                                    <p>Were you able to create a meal plan that was $30 or under?  Why or why not? (2 points)</p>
+                                </li>
+                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                <br>
+                                <li>
+                                    <p>What are <strong>three</strong> strategies you used to help Joleen stretch her food dollars as much as possible? (3 points)</p>
+                                </li>
+                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                <br>
+                                <li>
+                                    <p>If Joleen wanted to go out to dinner with friends, what advice would you give her to stick to her $30 weekly
+                                        food budget? (2 points)</p>
+                                </li>
+                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                <br>
+                                <li>    
+                                    <p>Select two meals to evaluate. (5 points each)</p>
+                                    <ol type="a">
+                                        <li> Day and meal:  <input type="text" class="form-control form-control-flush" name="q9"
+                                                                                                                placeholder="Type answer" style="border: 0.5px black">
+                                            <ol type="i">
+                                                <li>
+                                                    Based on the MyPlate guidelines, does that meal include all the food groups? If not, give three ways you could change the meal to be balanced?
+                                                    <input type="text" class="form-control form-control-flush" name="q9"
+                                                        placeholder="Type answer" style="border: 0.5px black">     
+                                                </li>
+                                            </ol>
+                                            <li> Day and meal: </li>  <input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                            <ol type="i">
+                                            <li>
+                                            Based on the MyPlate guidelines, does that meal include all the food groups? If not, give three ways you could change the meal to be balanced?
+                                            <input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black">     
+                                            </li>
+                                            </ol>
+
+                                         </li>
+                                    </ol>
+                                </li>
+                                <br>
+                                <li>
+                                    <p> When you were advising Joleen about the meal plan, she expressed the following concerns. Identify how you
+                                        would respond to Joleen to help her overcome those challenges (this may include recommending
+                                        modifications to the menu). </p>
+                                            <ol type ="a">
+                                                <li>
+                                                Three days per week she is on campus for class and cannot easily come home to eat lunch. (2
+points)
+                                                 </li>   
+<input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black"> 
+                                            
+                                            
+                                            <li>
+                                                Three days per week she is on campus for class and cannot easily come home to eat lunch. (2
+points)
+                                                 </li>   
+<input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black"> 
+
+
+                                            Renting    <li>
+                                                Explain how this menu might need to be adapted if Joleen’s cooking skills are limited. (2 points)
+                                                 </li>   
+<input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black"> 
+                                            </ol>
+                                </li>
+                            </ol>
+                            
+
+                            
+
+                                
+
+
+                       
+                    </div>
+                    
+                    
+                </div>
+                <button type="submit" class="btn btn-outline-danger w-100">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
