@@ -137,8 +137,13 @@ def submit_quiz(id):
                 new_response.insert()
                 
             case 2:
-                print("Yeah")
+                
                 new_response = Quiz2(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
+
+            case 3:
+                
+                new_response = WorkBook1(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
 
         return redirect(request.referrer)
@@ -155,6 +160,8 @@ def grade_quiz(id):
             quiz_responses = Quiz1
         case 2:
             quiz_responses = Quiz2
+        case 3:
+            quiz_responses = WorkBook1
         # Other cases for other quizzes
         case other:
             flash("Invalid")
@@ -172,8 +179,11 @@ def score_quiz(id):
                 quiz = Quiz1
             
             case 2:
-                print("Yeah")
+                
                 quiz = Quiz2
+
+            case 3:
+                quiz = WorkBook1
         quiz_obj = quiz.query.filter_by(id=id).first()
         quiz_obj.score = form_data['score']
         quiz_obj.update()
