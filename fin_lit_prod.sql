@@ -237,6 +237,43 @@ INSERT INTO `videos` (`id`, `title`, `description`, `file_name`, `cover`) VALUES
 	(7, 'Comparing Textbook Prices', 'Comparing Textbook Prices', 'textbook.mp4', 'textbook.png'),
 	(8, 'Free Resume Help for UTA Students', 'Free Resume Help for UTA Students', 'resume.mp4', 'resume.png');
 
+-- Dumping structure for table bjspdwgq1ftoekjz.quiz_1
+CREATE TABLE IF NOT EXISTS `quiz_1` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,
+  `q1` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q3` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q4` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q5` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q6` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q7` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q8` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q9` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q10` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q11` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q12` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q13` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q14` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q15` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q16` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q17` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q18` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q19` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q20` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q21` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q22` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_quiz_1_users` (`student_id`),
+  CONSTRAINT `FK_quiz_1_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table bjspdwgq1ftoekjz.quiz_1: ~0 rows (approximately)
+INSERT INTO `quiz_1` (`id`, `student_id`, `semester`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q8`, `q9`, `q10`, `q11`, `q12`, `q13`, `q14`, `q15`, `q16`, `q17`, `q18`, `q19`, `q20`, `q21`, `q22`, `score`) VALUES
+	(1, '1001750503', NULL, 'dsgsdg', 'sagdsg', 'sdgsdg', 'sagsfg', 'sfgsfg', 'asdfgfsg', 'afsgfsag', 'afgfag', 'adsgsagf', 'fgafg', 'agsafg', 'afsgfg', 'afsgsafg', 'asgffag', 'agadgfr', 'fgfasgfsa', 'agfag', 'afsgafsg', 'asgsg', 'asgsagr', 'asfgsag', 'sagfsg', 95);
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
