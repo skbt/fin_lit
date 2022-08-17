@@ -1,0 +1,292 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Quiz
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Transportation Reinforcement
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <form action="/quiz/submit/1" method="post">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <ol>
+                            <p><strong>Directions:</strong> Match the following terms with the correct definitions.
+                                <strong>(1
+                                    point
+                                    each)</strong></p>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q1"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Renting a product while ownership remains with the lease grantor.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q2"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Property that was purchased to create a lifestyle or improve your life.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q3"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            A portion of the purchase price that is not borrowed.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                           
+                            <br>
+                            <p><strong>Directions:</strong> Provide a short answer to the following questions. </p>
+                            <li>
+                                <div class="row">
+                                <p>
+                                    When purchasing an automobile you must consider all of the expenses. List 3 expenses other than the automobile payment that will factor into the total cost of the automobile. (3 points)
+                                </p>
+                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                            </div>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Explain what is meant by leasing a vehicle? What is an example of a hidden cost? (2 points)
+                                </p>
+                                <textarea class="form-control" name="q18" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Why should an individual consider depreciation when purchasing a vehicle? (1 point)
+                                </p>
+                                <textarea class="form-control" name="q18" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    If you were purchasing a vehicle, what are three features you would look for and why? (3 points)
+                                </p>
+                                <textarea class="form-control" name="q18" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Describe advantages and disadvantages of purchasing new vs. pre‐owned vehicles. (6 points)
+                                </p>
+                                <br>
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-body p-0">
+                                            <div class="table-responsive">
+                                                <table class="table card-table table-vcenter text-nowrap datatable">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>
+
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>New</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Pre-owned</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Advantage</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Disadvantage</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Advantage</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Disadvantage</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                        </tr>
+                                                        <thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>                                                                    
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>                                                                    
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>  
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>                                                          
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>                                                                    
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>   
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>                                                         
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Now that Joel has looked at his options, what are 3 resources for finding available homes to rent or purchase?
+                                    (3 points)                                
+                                </p>
+                                <textarea class="form-control" name="q20" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    If viewing a possible rental what are 2 items to be looking for? (2 points)
+                                </p>
+                                <textarea class="form-control" name="q21" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    What are two safety tips that should be followed when using a credit card? (2 points)
+                                </p>
+                                <textarea class="form-control" name="q22" placeholder="Type here"></textarea>
+                            </li>
+    
+                        </ol>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4>Answer Choices</h4>
+                        <ol type="A">
+                            <li>
+                                <label class="form-check">
+                                    <span class="form-check-label">Leasing</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <span class="form-check-label">Down Payment</span>
+                                </label></li>
+                            <li>
+                                <label class="form-check">
+                                    <span class="form-check-label">Tangible asset</span>
+                                </label>
+                            </li>   
+                        </ol>
+                    </div>
+                    
+                </div>
+                <button type="submit" class="btn btn-outline-danger w-100">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}

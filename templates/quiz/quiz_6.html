@@ -1,0 +1,387 @@
+{% extends 'base_w_header.html' %}
+{% set page = "course" %}
+{% block title %}
+Fin Lit | Quiz
+{% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <h2 class="page-title">
+                        Housing Reinforcement
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <form action="/quiz/submit/1" method="post">
+            <div class="container-xl">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <ol>
+                            <p><strong>Directions:</strong> Match the following terms with the correct definitions.
+                                <strong>(1
+                                    point
+                                    each)</strong></p>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q1"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            The price paid for the use of someone else's property.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q2"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            The person renting a property.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q3"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Monetary value of a property minus the amount owed on the property. 
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q4"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            A loan for the purchase of real estate.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q5"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Person who owns the property.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q6"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Contract specifying the tenant's and landlord's legal responsibilities.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q7"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Money paid to landlord to cover potential damage.                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q8"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Portion of the purchase price that is not borrowed.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="row">
+                                    <div class="col-lg-2">
+                                        <input type="text" class="form-control form-control-flush" name="q9"
+                                            placeholder="Type answer" style="border: 0.5px black">
+                                    </div>
+                                    <div class="col">
+                                        <p>
+                                            Fees and charges associated with the purchase of a property.                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <p><strong>Directions:</strong> Fill in the blank with the appropriate word <strong>(1
+                                    point
+                                    each)</strong></p>
+                            <li>
+                                <div class="row">
+                                        <p>
+                                            Housing is one of the ________________________ expenses for most people.
+                                            <br>
+                                            <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        </p>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="row">
+                            
+                                        <p>
+                                            A typical down payment is ________________________ to ________________________% of the purchase price of the home.       
+                                        </p>
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="row">
+                                    
+                                        <p>
+                                            Rental applications may ask prospective tenants about their ________________________ , ________________________ and ________________________.    
+                                        </p>
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here">   
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <div class="row">
+                                        <p>
+                                            Purchasing a property is complex and a real estate agent helps you find property that fits your ________________________, ________________________ and ________________________.                                        
+                                        </p>
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                        <input type="text" class="form-control" name="example-text-input" placeholder="Type Here"> 
+                                </div>
+                            </li>
+                           
+                            <br>
+                            <p><strong>Directions:</strong> Provide a short answer to the following questions. </p>
+    
+                            <li>
+                                <div class="row">
+                                <p>
+                                    Camila is trying to decide if she should purchase renter's insurance. What would you say to advise her on this topic? (1 point)
+                                </p>
+                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                            </div>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Explain four ways your personal financial condition can affect your housing choice. (4 points)
+                                </p>
+                                <textarea class="form-control" name="q18" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Joel has recently accepted a job offer and is trying to decide whether he should rent or buy housing. He is relocating to an urban area with public transportation although he does have a bike that he enjoys riding and would need to be able to store. This is his first position since graduating from college and he doesn’t know anybody in the area. Since he is an architect, he needs space for his drafting table and enjoys designing homes. In the area below list at least three reasons why he should choose either renting or buying as his housing choice. (6 points)                                
+                                </p>
+                                <br>
+                                <div class="row">
+                                    <div class="card">
+                                        <div class="card-body p-0">
+                                            <div class="table-responsive">
+                                                <table class="table card-table table-vcenter text-nowrap datatable">
+                                                    <thead>
+                                                        <tr>
+                                                            
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Rent</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            </td>
+                                                            <td class="text-muted">
+                                                                <strong>
+                                                                    <centre>
+                                                                        <p>Buy</p>
+                                                                    </centre>
+                                                                </strong>
+                                                            
+                                                        </tr>
+                                                        <thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>                                                                    
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                                <td class="text-muted">
+                                                                    <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    Now that Joel has looked at his options, what are 3 resources for finding available homes to rent or purchase?
+                                    (3 points)                                
+                                </p>
+                                <textarea class="form-control" name="q20" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    If viewing a possible rental what are 2 items to be looking for? (2 points)
+                                </p>
+                                <textarea class="form-control" name="q21" placeholder="Type here"></textarea>
+                            </li>
+                            <br>
+                            <li>
+                                <p>
+                                    What are two safety tips that should be followed when using a credit card? (2 points)
+                                </p>
+                                <textarea class="form-control" name="q22" placeholder="Type here"></textarea>
+                            </li>
+    
+                        </ol>
+                    </div>
+                    <div class="col-lg-4">
+                        <h4>Answer Choices</h4>
+                        <ol type="A">
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Landlord</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Rent</span>
+                                </label></li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Tenant</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Rental Agreement</span>
+                                </label></li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Security Deposit</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Mortgage</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Down Payment</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Closing Cost</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <span class="form-check-label">Equity</span>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                </div>
+                <button type="submit" class="btn btn-outline-danger w-100">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
