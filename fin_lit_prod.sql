@@ -119,8 +119,8 @@ INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUE
   (7, 2, 'Food Reinforcement', 'quiz_5', 'quiz'),
   (8, 2, 'Housing Reinforcement', 'quiz_6', 'quiz'),
   (9, 2, 'Rental Agreement Checklist', 'quiz_7', 'quiz'),
-  (10, 2, 'Transportation Reinforcement', 'quiz_8', 'quiz');
-  (11, 2, 'Eating on Budget', 'quiz_3', 'quiz'),
+  (10, 2, 'Transportation Reinforcement', 'quiz_8', 'quiz'),
+  (11, 2, 'Eating on Budget', 'quiz_3', 'quiz');
 
 -- Dumping structure for table fin_lit.module_scores
 CREATE TABLE IF NOT EXISTS `module_scores` (
@@ -218,7 +218,7 @@ INSERT INTO `users` (`id`, `name`, `school`, `email`, `password`, `role_id`, `dp
 	('1001750503', 'Aneesh Melkot', 'UTA', '', '$pbkdf2-sha256$29000$AiDE.L/Xeu8dI2TMube2Ng$f7PgXZ2/whPxPLDc9jaQhBrXREBRalFfh3aAaTMTONU', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
 	('1001773798', 'Nabeel Eusufzai', 'University of Texas at Arlington', '', '$pbkdf2-sha256$29000$vPee837v/X9vzZmT8l5r7Q$RmFVFRtDBoR6nwkh/HAzoENzpj8AgWCJkRqh50of/JA', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
 	('1001860116', 'Tabitha Griffin', 'University of Texas at Arlington ', '', '$pbkdf2-sha256$29000$XisFYKxVCuFci/Fea40RAg$Y6BwRZBqjGwhsT0vTlvHzGzqGfGiGHAH0KR5Yg2wDVc', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
-	('100188', 'Lavin', 'University of Texas at Arlington ', '', '$pbkdf2-sha256$29000$ovQ.R4iRMmYsZcxZ6z1HaA$qm38AGregCny.04IJcjqO70mSog1YnAq/9QXJGmVMhk', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', '');
+	('100188', 'Lavin', 'University of Texas at Arlington ', '', '$pbkdf2-sha256$29000$ovQ.R4iRMmYsZcxZ6z1HaA$qm38AGregCny.04IJcjqO70mSog1YnAq/9QXJGmVMhk', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', ''),
 	('101', 'Shashank', 'UTA ', '', '$pbkdf2-sha256$29000$rtX6fy8FwDhHCMF4L0VIiQ$WK9/WBjK.E/XxwDoS0WqUCibKmUfuxLqv.CzJ3Ld6nQ', 1, 'https://res.cloudinary.com/dtvhyzofv/image/upload/v1647144583/banter/dp/user_awjxuf.png', '', '');
 
 -- Dumping structure for table fin_lit.videos
@@ -242,7 +242,7 @@ INSERT INTO `videos` (`id`, `title`, `description`, `file_name`, `cover`) VALUES
 	(7, 'Comparing Textbook Prices', 'Comparing Textbook Prices', 'textbook.mp4', 'textbook.png'),
 	(8, 'Free Resume Help for UTA Students', 'Free Resume Help for UTA Students', 'resume.mp4', 'resume.png');
 
--- Dumping structure for table bjspdwgq1ftoekjz.quiz_1
+-- Dumping structure for table fin_lit.quiz_1
 CREATE TABLE IF NOT EXISTS `quiz_1` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -284,3 +284,34 @@ INSERT INTO `quiz_1` (`id`, `student_id`, `semester`, `q1`, `q2`, `q3`, `q4`, `q
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
+
+-- Dumping structure for table fin_lit.quiz_2
+CREATE TABLE IF NOT EXISTS `quiz_2` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,
+  `q1` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q3` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q4` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q5` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q6` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q7` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q8` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q9` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q10` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q11` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q12` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q13` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q14` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q15` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q16` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q17` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q18` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q19` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q20` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_quiz_2_users` (`student_id`),
+  CONSTRAINT `FK_quiz_2_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
