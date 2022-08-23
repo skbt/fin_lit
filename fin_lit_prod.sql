@@ -360,3 +360,35 @@ CREATE TABLE IF NOT EXISTS `workbook_1` (
   CONSTRAINT `FK_workbook_1_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+-- Dumping structure for table fin_lit.workbook_2
+CREATE TABLE IF NOT EXISTS `workbook_2` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,  
+  `q1a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q1b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q2a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q2b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q3a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q3b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q4a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q4b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q5a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q5b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q6a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q6b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q7a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q7b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q8a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q8b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q9a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q9b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q10a` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q10b` varchar(100) COLLATE utf8mb4_unicode_ci NULL,
+  `q11` varchar(1000) COLLATE utf8mb4_unicode_ci NULL,
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_workbook_2_users` (`student_id`),
+  CONSTRAINT `FK_workbook_2_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+

@@ -46,6 +46,9 @@ class User(db.Model):
 
     workbook_1 = db.relationship('WorkBook1', backref='user', lazy=True)
 
+    workbook_2 = db.relationship('WorkBook2', backref='user', lazy=True)
+
+
     def insert(self):
         db.session.add(self)
         db.session.commit()
@@ -520,9 +523,68 @@ class WorkBook1(db.Model):
     
     q21 = db.Column(db.String, nullable = True)
     
-    score = db.Column(db.Float)
+    score = db.Column(db.Float, nullable = True)
 
     student = db.relationship('User', back_populates='workbook_1')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+class WorkBook2(db.Model):
+    __tablename__ = 'workbook_2'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    
+    q1a = db.Column(db.String, nullable = True)
+    q1b = db.Column(db.String, nullable = True)
+    
+    q2a = db.Column(db.String, nullable = True)
+    q2b = db.Column(db.String, nullable = True)
+    
+    q3a = db.Column(db.String, nullable = True)
+    q3b = db.Column(db.String, nullable = True)
+    
+    q4a = db.Column(db.String, nullable = True)
+    q4b = db.Column(db.String, nullable = True)
+    
+    q5a = db.Column(db.String, nullable = True)
+    q5b = db.Column(db.String, nullable = True)
+    
+    q6a = db.Column(db.String, nullable = True)
+    q6b = db.Column(db.String, nullable = True)
+    
+    q7a = db.Column(db.String, nullable = True)
+    q7b = db.Column(db.String, nullable = True)
+    
+    q8a = db.Column(db.String, nullable = True)
+    q8b = db.Column(db.String, nullable = True)
+    
+    q9a = db.Column(db.String, nullable = True)
+    q9b = db.Column(db.String, nullable = True)
+    
+    q10a = db.Column(db.String, nullable = True)
+    q10b = db.Column(db.String, nullable = True)
+    
+    q11 = db.Column(db.String, nullable = True)
+    
+    score = db.Column(db.Float, nullable = True)
+
+    student = db.relationship('User', back_populates='workbook_2')
 
     def insert(self):
         db.session.add(self)
