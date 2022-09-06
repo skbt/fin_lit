@@ -1,4 +1,3 @@
-import email
 from flask import (Flask, flash, jsonify, redirect, render_template, request,
                    send_file, session, url_for)
 from functools import wraps
@@ -134,23 +133,16 @@ def submit_quiz(id):
             case 1:
                 print("Yeah")
                 new_response = Quiz1(id=id, student_id=session['user']['id'], **form_data)
-                new_response.insert()
-                
+                new_response.insert()  
             case 2:
-                
                 new_response = Quiz2(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
-
             case 3:
-                
                 new_response = WorkBook1(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
-
             case 4:
-                
                 new_response = WorkBook2(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
-
         return redirect(request.referrer)
     except Exception as e:
         print(f'Error ==> {e}')
@@ -161,14 +153,10 @@ def submit_quiz(id):
 def grade_quiz(id):
     quiz = ModuleQuiz.query.filter_by(id=id).first()
     match id:
-        case 1:
-            quiz_responses = Quiz1
-        case 2:
-            quiz_responses = Quiz2
-        case 3:
-            quiz_responses = WorkBook1
-        case 4:
-            quiz_responses = WorkBook2
+        case 1: quiz_responses = Quiz1
+        case 2: quiz_responses = Quiz2
+        case 3: quiz_responses = WorkBook1
+        case 4: quiz_responses = WorkBook2
         # Other cases for other quizzes
         case other:
             flash("Invalid")
@@ -181,22 +169,10 @@ def score_quiz(id):
     form_data = request.form.to_dict()
     try:
         match id:
-            case 1:
-                print("Yeah")
-                quiz = Quiz1
-            
-            case 2:
-                
-                quiz = Quiz2
-
-            case 3:
-
-                quiz = WorkBook1
-            
-            case 4:
-                
-                quiz = WorkBook2
-                
+            case 1: quiz = Quiz1
+            case 2: quiz = Quiz2
+            case 3: quiz = WorkBook1
+            case 4: quiz = WorkBook2
         quiz_obj = quiz.query.filter_by(id=id).first()
         quiz_obj.score = form_data['score']
         quiz_obj.update()
