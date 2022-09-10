@@ -10,3 +10,8 @@ services:
     environment:
       - MARIADB_ROOT_PASSWORD=${DB_ROOT_PWD}
       - MARIADB_DATABASE=fin_lit=${DB_NAME}
+    volumes:
+      - db-data:/var/lib/mysql
+volumes:
+  db-data:
+    driver: local
