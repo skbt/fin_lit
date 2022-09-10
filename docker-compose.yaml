@@ -1,12 +1,10 @@
 services:
   web:
-    container_name: web
     build: .
     image: python:3.8-slim-buster
     ports:
       - 5050:5000
   db:
-    container_name: db
     image: mariadb
     ports:
       - 3306:3306
