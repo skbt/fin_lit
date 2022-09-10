@@ -1,7 +1,6 @@
 services:
   web:
     build: .
-    image: python:3.8-slim-buster
     ports:
       - 5050:5000
   db:
