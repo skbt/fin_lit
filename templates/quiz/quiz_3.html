@@ -1,7 +1,7 @@
 {% extends 'base_w_header.html' %}
 {% set page = "course" %}
 {% block title %}
-Fin Lit | Quiz
+Fin Lit | Course
 {% endblock %}
 
 {% block styles %}
@@ -26,579 +26,1386 @@ Fin Lit | Quiz
             <div class="row g-2 align-items-center">
                 <div class="col">
                     <h2 class="page-title">
-                        Eating on Budget
+                        Eating on a Bugdet
                     </h2>
                 </div>
             </div>
         </div>
     </div>
-    <div class="page-body">
+    <div class="page-body">        
         <form action="/quiz/submit/11" method="post">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-lg-12">
-                        
-                            <p><strong>Scenario:</strong> Joleen is a college student living in an apartment. She is trying to keep the food portion of her spending
-                                plan at $30 a week. She plans to eat 3 meals daily with one small snack. She would like to eat out once a week if
-                                possible.
-                            </p>
-                            <br>
-                            <p> Her refrigerator and pantry includes following items:</p>
-                            <div class="row">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table card-table table-vcenter text-nowrap datatable">
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> ½ pound deli sliced ham </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> 3 eggs </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> 2 Oranges </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> 1 can of the soup </p>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> 1 box of mac and cheese </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> 1 Banana </p>
-                                                            </td>
-                                                        </tr>
 
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> 4 Slices Bed </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Ketchup </p>
-                                                            </td>
-                                                        </tr>
+                    <p>
+                        <strong>Scenario:</strong> Joleen is a college student living in an apartment. She is trying to keep the food portion of her spending
+                        plan at $30 a week. She plans to eat 3 meals daily with one small snack. She would like to eat out once a week if
+                        possible
+                    </p>
 
+                    <p>Her refrigerator and pantry have the following items:</p>
 
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> 1 Tomato </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Ranch Dressing </p>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> 2 slices of cheese </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Variety of staples (butter, sugar, miracle whip, cooking
-                                                                    spices) </p>
-                                                            </td>
-                                                        </tr>
-
-                                                    </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-
-
-
-
-                            <p>The weekly ad lists the following sale items.</p>
-                            <div class="row">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table card-table table-vcenter text-nowrap datatable">
-                                                <thead>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> Item </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Quantity </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Cost </p>
-                                                            </td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <p> Item </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Quantity </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Cost </p>
-                                                            </td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Cheerios </span></label>
-                                                            </td>
-                                                            <td>Box</td>
-                                                            <td>$2.50</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hashbrowns </span></label>
-                                                            </td>
-                                                            <td>32 oz</td>
-                                                            <td>$2.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Strawberries </span></label>
-                                                            </td>
-                                                            <td>1 lb</td>
-                                                            <td>$2.00</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Orange Juice </span></label>
-                                                            </td>
-                                                            <td>½ Gallon</td>
-                                                            <td>$2.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Rib Steak </span></label>
-                                                            </td>
-                                                            <td>1 lb</td>
-                                                            <td>$5.99</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Green Beans </span></label>
-                                                            </td>
-                                                            <td>12 oz</td>
-                                                            <td>$2.49</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Red Peppers </span></label>
-                                                            </td>
-                                                            <td>Each</td>
-                                                            <td>$1.50</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Baby Carrots </span></label>
-                                                            </td>
-                                                            <td>Bag</td>
-                                                            <td>$0.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Shredded Cheddar </span></label>
-                                                            </td>
-                                                            <td>8 oz</td>
-                                                            <td>$1.50</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Yogurt </span></label>
-                                                            </td>
-                                                            <td>6 oz</td>
-                                                            <td>$0.50</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pork and Beans </span></label>
-                                                            </td>
-                                                            <td>can</td>
-                                                            <td>$0.79</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Chips </span></label>
-                                                            </td>
-                                                            <td>bag</td>
-                                                            <td>$3.99</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Rice Roni </span></label>
-                                                            </td>
-                                                            <td>Box</td>
-                                                            <td>$1.00</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pancake Mix </span></label>
-                                                            </td>
-                                                            <td>Box</td>
-                                                            <td>$2.69</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pasta </span></label>
-                                                            </td>
-                                                            <td>Bag</td>
-                                                            <td>$0.99</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pasta Sauce </span></label>
-                                                            </td>
-                                                            <td>Jar</td>
-                                                            <td>$1.79</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Chicken </span></label>
-                                                            </td>
-                                                            <td>can</td>
-                                                            <td>$2.00</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> SpaghettiOs® </span></label>
-                                                            </td>
-                                                            <td>can</td>
-                                                            <td>$0.89</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hot Pockets </span></label>
-                                                            </td>
-                                                            <td>Box</td>
-                                                            <td>$2.00</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Pizza </span></label>
-                                                            </td>
-                                                            <td>Box</td>
-                                                            <td>$3.50</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Frozen Vegetable </span></label>
-                                                            </td>
-                                                            <td>Bag</td>
-                                                            <td>$1.50</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Bread </span></label>
-                                                            </td>
-                                                            <td>Loaf</td>
-                                                            <td>$1.48</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Eggs </span></label>
-                                                            </td>
-                                                            <td>1 dozen</td>
-                                                            <td>$2.39</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Apple </span></label>
-                                                            </td>
-                                                            <td>1 lb</td>
-                                                            <td>$1.79</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Fresh Spinach </span></label>
-                                                            </td>
-                                                            <td>16 oz</td>
-                                                            <td>$2.45</td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2"><input class="form-check-input" type="checkbox" /><span class="form-check-label"> Hamburger </span></label>
-                                                            </td>
-                                                            <td>1 lb</td>
-                                                            <td>$2.75</td>
-                                                        </tr>                                                        
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-
-
-                            <p> Other items (up to 8)  
-                            </p>
-                            <div class="row">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table card-table table-vcenter text-nowrap datatable">
-                                                <thead>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <p> Item </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Quantity </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Cost </p>
-                                                            </td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <p> Item </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Quantity </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Cost </p>
-                                                            </td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td></td>
-                                                            <td class="text-muted">
-                                                                <label class="form-check mb-2">
-                                                                    <input class="form-check-input" type="checkbox" /><span class="form-check-label"> <input type="text" class="form-control" name="example-text-input" /> </span>
-                                                                </label>
-                                                            </td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                            <td><input type="text" class="form-control" name="example-text-input" /></td>
-                                                        </tr>
-                                                        
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-
-                            <div class="row">
-                            <strong>Step 1: Create the Menu </strong>(20 points for completion)
-                            Help Joleen develop a meal plan for one week. Remember, her goal is to spend no more than $30 on groceries!
-                            For each meal, indicate the food needed such as spaghetti (pasta, hamburger, sauce), apple and slice of bread.  
-                            When developing her meal plan, keep the following in mind:
-                                <ol>
-                                    <li> Use what she already has in her refrigerator and pantry (assume she has non‐perishable staple items)</li>
-                                    <li> Up to eight items, in addition to the weekly ad of sale items may be purchased.  </li>
-                                    <li> Leftovers can be used </li>
-                                    <li> Some items have enough quantity to be used for multiple meals</li>
-                                    <li> Create well balanced meals high in nutrition</li>
-                                </ol>
-                            </div>    
-
-                            <br>
-
-
-
-                            <div class="row">
-                                <div class="card">
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table card-table table-vcenter text-nowrap datatable">
-                                                <thead>
-                                                        <tr>
-                                                            <td class="text-muted">
-                                                               
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Breakfast </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Lunch </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Dinner </p>
-                                                            </td>
-                                                            <td class="text-muted">
-                                                                <p> Snack </p>
-                                                            </td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr><td class="text-muted">   Monday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Tuesdayday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Wednesday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Thursday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Friday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Saturday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                        <tr><td class="text-muted">   Sunday </td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> <td><input type="text" class="form-control" name="example-text-input" /></td> </tr>
-                                                         
-                                                    </tbody>
-                                                </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <br>
-
-                            <div class="row">
-                                <strong> Step 2: Create a Grocery List and Evaluate the Budget</strong>
-                                Use the menu plan to create a grocery list by placing a check mark next to all items on page 1 that will be
-                                used. (5 points for completion)
-                                <ol>
-                                    <li> Determine the price of items not on the grocery list using a website such as Instacart or visiting a local grocery
-                                    store. (5 points for completion)</li>
-                                    <li> Calculate the total cost of the grocery list:____________________ (1 point) </li>
-                                </ol>
-                                <input type="text" class="form-control" name="example-text-input" />
-                            </div>
-
-                            <br>
-
-                            <div class="row">
-                                <strong>Step 3: Reflection</strong>
-                            </div>
-                            <br>
-                            <ol>
-                                <li>
-                                    <p>Were you able to create a meal plan that was $30 or under?  Why or why not? (2 points)</p>
-                                </li>
-                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
-                                <br>
-                                <li>
-                                    <p>What are <strong>three</strong> strategies you used to help Joleen stretch her food dollars as much as possible? (3 points)</p>
-                                </li>
-                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
-                                <br>
-                                <li>
-                                    <p>If Joleen wanted to go out to dinner with friends, what advice would you give her to stick to her $30 weekly
-                                        food budget? (2 points)</p>
-                                </li>
-                                <textarea class="form-control" name="q17" placeholder="Type here"></textarea>
-                                <br>
-                                <li>    
-                                    <p>Select two meals to evaluate. (5 points each)</p>
-                                    <ol type="a">
-                                        <li> Day and meal:  <input type="text" class="form-control form-control-flush" name="q9"
-                                                                                                                placeholder="Type answer" style="border: 0.5px black">
-                                            <ol type="i">
-                                                <li>
-                                                    Based on the MyPlate guidelines, does that meal include all the food groups? If not, give three ways you could change the meal to be balanced?
-                                                    <input type="text" class="form-control form-control-flush" name="q9"
-                                                        placeholder="Type answer" style="border: 0.5px black">     
-                                                </li>
-                                            </ol>
-                                            <li> Day and meal: </li>  <input type="text" class="form-control form-control-flush" name="q9"
-                                            placeholder="Type answer" style="border: 0.5px black">
-                                            <ol type="i">
-                                            <li>
-                                            Based on the MyPlate guidelines, does that meal include all the food groups? If not, give three ways you could change the meal to be balanced?
-                                            <input type="text" class="form-control form-control-flush" name="q9"
-                                            placeholder="Type answer" style="border: 0.5px black">     
-                                            </li>
-                                            </ol>
-
-                                         </li>
-                                    </ol>
-                                </li>
-                                <br>
-                                <li>
-                                    <p> When you were advising Joleen about the meal plan, she expressed the following concerns. Identify how you
-                                        would respond to Joleen to help her overcome those challenges (this may include recommending
-                                        modifications to the menu). </p>
-                                            <ol type ="a">
-                                                <li>
-                                                Three days per week she is on campus for class and cannot easily come home to eat lunch. (2
-points)
-                                                 </li>   
-<input type="text" class="form-control form-control-flush" name="q9"
-                                            placeholder="Type answer" style="border: 0.5px black"> 
+                    <div class="card">
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table card-table table-vcenter text-nowrap datatable">
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q1">
+                                                        <span class="form-check-label"><sup>1</sup>&frasl;<sub>2</sub> pound deli sliced ham</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q2">
+                                                        <span class="form-check-label">3 eggs</span>
+                                                    </label>
+                                                </centre>
+                                            </td>                                            
+                                        </tr>
                                             
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q3">
+                                                        <span class="form-check-label">2 oranges</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q4">
+                                                            <span class="form-check-label">1 can of soup</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                            
+                                        </tr>
                                             
-                                            <li>
-                                                Three days per week she is on campus for class and cannot easily come home to eat lunch. (2
-points)
-                                                 </li>   
-<input type="text" class="form-control form-control-flush" name="q9"
-                                            placeholder="Type answer" style="border: 0.5px black"> 
-
-
-                                            Renting    <li>
-                                                Explain how this menu might need to be adapted if Joleen’s cooking skills are limited. (2 points)
-                                                 </li>   
-<input type="text" class="form-control form-control-flush" name="q9"
-                                            placeholder="Type answer" style="border: 0.5px black"> 
-                                            </ol>
-                                </li>
-                            </ol>
-                            
-
-                            
-
-                                
-
-
-                       
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q5">
+                                                        <span class="form-check-label">1 box mac n' cheese</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q6">
+                                                            <span class="form-check-label">1 banana</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                            
+                                        </tr>
+                                            
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q7">
+                                                        <span class="form-check-label">4 slice bread</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q8">
+                                                            <span class="form-check-label">Ketchup</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                            
+                                        </tr>
+                                            
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q9">
+                                                        <span class="form-check-label">1 Tomato</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="10">
+                                                            <span class="form-check-label">Ranch Dressing</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                            
+                                        </tr>
+                                            
+                                        <tr>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q11">
+                                                        <span class="form-check-label">2 slices of cheese</span>
+                                                    </label>
+                                                </centre>
+                                            </td>
+                                            <td class="text-muted">
+                                                <centre>
+                                                    <label class="form-check">
+                                                        <input class="form-check-input" type="checkbox" name="q12">
+                                                        <span class="form-check-label">Variety of staples (butter, sugar, miracle whip, cooking spices)</span>
+                                                    </label>
+                                                </centre>
+                                            </td>                                            
+                                        </tr>
+                                            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                <br>
+                <br>
+                
+                <div class="row">
+                    <p>
+                        The weekly ad lists the following sale items.
+                    </p>
                     
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table card-table table-vcenter text-nowrap datatable">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Item</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Quantity</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Cost</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                            <thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q13">
+                                                            <span class="form-check-label">Cheerios</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Box
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q14">
+                                                            <span class="form-check-label">Strawberries</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    1 lb
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.00
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q15">
+                                                            <span class="form-check-label">Rib Steak</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    1 lb
+                                                </td>
+                                                <td class="text-muted">
+                                                    $5.99
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q16">
+                                                            <span class="form-check-label">Red Peppers</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Each
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q17">
+                                                            <span class="form-check-label">Shredded Cheddar</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    8 oz
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q18">
+                                                            <span class="form-check-label">Pork and Beans</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Can
+                                                </td>
+                                                <td class="text-muted">
+                                                    $0.79
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q19">
+                                                            <span class="form-check-label">Rice Roni</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Box
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.00
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q20">
+                                                            <span class="form-check-label">Pasta</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Bag
+                                                </td>
+                                                <td class="text-muted">
+                                                    $0.99
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q21">
+                                                            <span class="form-check-label">Chicken</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Can
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.00
+                                                </td>                                            
+                                            </tr>
+
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q22">
+                                                            <span class="form-check-label">Hot Pockets</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Box
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.00
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q23">
+                                                            <span class="form-check-label">Frozen Vegetable</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Bag
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q24">
+                                                            <span class="form-check-label">Eggs</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    1 Dozen
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.39
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q25">
+                                                            <span class="form-check-label">Fresh Spinach</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    16 oz
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.45
+                                                </td>                                            
+                                            </tr>                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table card-table table-vcenter text-nowrap datatable">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Item</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Quantity</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Cost</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                            <thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q27">
+                                                            <span class="form-check-label">Hashbrowns</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    32 oz
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.00
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q28">
+                                                            <span class="form-check-label">Orange Juice</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <sup>1</sup>&frasl;<sub>2</sub> Gallon
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.99
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q29">
+                                                            <span class="form-check-label">Green Beans</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    12 oz
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.49
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q30">
+                                                            <span class="form-check-label">Baby Carrots</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Bag
+                                                </td>
+                                                <td class="text-muted">
+                                                    $0.99
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q31">
+                                                            <span class="form-check-label">Yogurt</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    6 oz
+                                                </td>
+                                                <td class="text-muted">
+                                                    $0.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q32">
+                                                            <span class="form-check-label">Chips</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Bag
+                                                </td>
+                                                <td class="text-muted">
+                                                    $3.99
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q33">
+                                                            <span class="form-check-label">Pancake Mix</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Box
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.69
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q34">
+                                                            <span class="form-check-label">Pasta Sauce</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Jar
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.79
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q35">
+                                                            <span class="form-check-label">SpaghettiOs&reg;</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Can
+                                                </td>
+                                                <td class="text-muted">
+                                                    $0.89
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q36">
+                                                            <span class="form-check-label">Pizza</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Box
+                                                </td>
+                                                <td class="text-muted">
+                                                    $3.50
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q37">
+                                                            <span class="form-check-label">Bread</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    Loaf
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.48
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q38">
+                                                            <span class="form-check-label">Apple</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    1 lb
+                                                </td>
+                                                <td class="text-muted">
+                                                    $1.79
+                                                </td>                                            
+                                            </tr>
+                                                
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>
+                                                        <label class="form-check">
+                                                            <input class="form-check-input" type="checkbox" name="q39">
+                                                            <span class="form-check-label">Hamburger</span>
+                                                        </label>
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    1 lb
+                                                </td>
+                                                <td class="text-muted">
+                                                    $2.75
+                                                </td>                                            
+                                            </tr>
+                                                
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <br>
+                <br>
+
+                <div class="row">
+                    <p>
+                        Other items (up to 8).
+                    </p>
+                    
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table card-table table-vcenter text-nowrap datatable">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Item</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Quantity</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Cost</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                            <thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q40a">
+                                                        </span>
+                                                        <input type="text" class="form-control"  name="q40b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush"  name="q40c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush"  name="q40d"
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q41a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q41b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q41c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q41d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q42a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q42b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q42c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q42d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q43a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q43b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q43c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q43d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table card-table table-vcenter text-nowrap datatable">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Item</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Quantity</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Cost</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                            <thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q44a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q44b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q44c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q44d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q45a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q45b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q45c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q45d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q46a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q46b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q46c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q46d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <centre>                                                    
+                                                        
+                                                    <div class="input-group mb-2">
+                                                        <span class="input-group-text">
+                                                            <input class="form-check-input m-0" type="checkbox" name="q47a">
+                                                        </span>
+                                                        <input type="text" class="form-control" name="q47b" placeholder="Type here..." autocomplete="off">
+                                                    </div>
+                                                    
+                                                    </centre>
+                                                </td>                                        
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q47c" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <div class="col-lg-2">
+                                                        <input type="text" class="form-control form-control-flush" name="q47d" 
+                                                            style="border: 0.5px black">
+                                                    </div>
+                                                </td>                                            
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <br>
+                <br>
+
+                <div class="row">
+                    <p>
+                        <strong>Step 1: Create the Menu</strong> (20 points for completion)
+                    </p>
+
+                    <br>
+
+                    <br>
+
+                    <p>
+                        Help Joleen develop a meal plan for one week. Remember, her goal is to spend no more than $30 on groceries!
+                        For each meal, indicate the food needed such as spaghetti (pasta, hamburger, sauce), apple and slice of bread.
+                        When developing her meal plan, keep the following in mind:                    
+                    </p>
+
+                    <br>
+
+                    <br>
+
+                    <!-- have to align this -->
+                    <p>
+                        <ul>
+                            <li>
+                                Use what she already has in her refrigerator and pantry (assume she has non‐perishable staple items)
+                            </li>
+                            <li>
+                                Up to eight items, in addition to the weekly ad of sale items may be purchased.
+                            </li>
+                            <li>
+                                Leftovers can be used
+                            </li>
+                            <li>
+                                Some items have enough quantity to be used for multiple meal
+                            </li>
+                            <li>
+                                Create well balanced meals high in nutrition
+                            </li>
+                        </ul>
+
+                    </p>
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table card-table table-vcenter text-nowrap datatable">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p> </p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Breakfast</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Lunch</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Dinner</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                                <td class="text-muted">
+                                                    <strong>
+                                                        <centre>
+                                                            <p>Snack</p>
+                                                        </centre>
+                                                    </strong>
+                                                </td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td class="text-muted"><strong>   Monday </strong></td> <td><input type="text" class="form-control" name="q48a" /></td> <td><input type="text" class="form-control" name="q48b" /></td> <td><input type="text" class="form-control" name="q48c" /></td> <td><input type="text" class="form-control" name="q48d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Tuesday </strong></td> <td><input type="text" class="form-control" name="q49a" /></td> <td><input type="text" class="form-control" name="q49b" /></td> <td><input type="text" class="form-control" name="q49c" /></td> <td><input type="text" class="form-control" name="q49d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Wednesday </strong></td> <td><input type="text" class="form-control" name="q50a" /></td> <td><input type="text" class="form-control" name="q50b" /></td> <td><input type="text" class="form-control" name="q50c" /></td> <td><input type="text" class="form-control" name="q50d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Thursday </strong></td> <td><input type="text" class="form-control" name="q51a" /></td> <td><input type="text" class="form-control" name="q51b" /></td> <td><input type="text" class="form-control" name="q51c" /></td> <td><input type="text" class="form-control" name="q51d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Friday </strong></td> <td><input type="text" class="form-control" name="q52a" /></td> <td><input type="text" class="form-control" name="q52b" /></td> <td><input type="text" class="form-control" name="q52c" /></td> <td><input type="text" class="form-control" name="q52d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Saturday </strong></td> <td><input type="text" class="form-control" name="q53a" /></td> <td><input type="text" class="form-control" name="q53b" /></td> <td><input type="text" class="form-control" name="q53c" /></td> <td><input type="text" class="form-control" name="q53d" /></td> </tr>
+                                            <tr><td class="text-muted"><strong>   Sunday </strong></td> <td><input type="text" class="form-control" name="q54a" /></td> <td><input type="text" class="form-control" name="q54b" /></td> <td><input type="text" class="form-control" name="q54c" /></td> <td><input type="text" class="form-control" name="q54d" /></td> </tr>
+                                                
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
                     
                 </div>
+
+                <br>
+                <br>
+
+                <div class="row">
+                    <p>
+                        <strong>Step 2: Create a Grocery List and Evaluate the Budget</strong>                    
+                    </p>
+                    
+                    <br>
+
+                    <br>
+
+                    <!-- have to align this -->
+                    <p>
+                        <ul>
+                            <li>
+                                Use the menu plan to create a grocery list by placing a check mark next to all items on page 1 that will be used. (5 points for completion)
+                            </li>
+                            <li>
+                                Determine the price of items not on the grocery list using a website such as Instacart or visiting a local grocery
+                                store. (5 points for completion) 
+                            </li>
+                            <li>
+                                Calculate the total cost of the grocery list:
+                                
+                                <input type="text" class="form-control form-control-flush" name="q55" placeholder="Type answer" style="border: 0.5px black">
+
+                            </li>
+                            
+                        </ul>
+
+                    </p>
+                    
+                </div>
+                
+                
+                <div class="row">
+                    <p>
+                        <strong>Step 3: Reflection</strong>                    
+                    </p>
+                    
+                    <br>
+
+                    <br>
+
+                    <!-- have to align this -->
+                    <p>
+                        <ol>
+                            <li>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            Were you able to create a meal plan that was $30 or under?  Why or why not? (2 points)
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <textarea class="form-control" name="q56" placeholder="Type answer"></textarea>
+                                    </div>
+                                </div>
+
+                                <br>
+                                
+                            </li>                        
+                            
+                            <li>
+                                What are three strategies you used to help Joleen stretch her food dollars as much as possible? (3 points)
+                                <br>
+                                        
+                                <ul>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <textarea class="form-control" name="q57a" placeholder="Type answer"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <br>
+
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <textarea class="form-control" name="q57b" placeholder="Type answer"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <br>
+                                        
+                                    </li>
+                                    
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <textarea class="form-control" name="q57c" placeholder="Type answer"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <br>
+                                    
+                                    </li>
+                                </ul>
+                                
+                                <br>
+
+                            </li>
+
+                            <li>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            If Joleen wanted to go out to dinner with friends, what advice would you give her to stick to her $30 weekly food budget? (2 points)
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <textarea class="form-control" name="q58" placeholder="Type answer"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <br>
+                            </li>
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col-8">
+                                        <p>
+                                            Select two meals to evaluate. (5 points each)
+                                        </p>
+                                    </div>
+
+                                    <div class="col-4"><img src="{{ url_for('static', filename='images/MyPlate_gov.png') }}"
+                                        class="img-fluid" alt="sfv-logo"> </div>
+                                </div>
+
+                                <ol type="a">
+                                    <li>
+                                        <div class="row">                                        
+                                            <div class="col-lg-2">
+                                                <p>
+                                                    Day and meal:
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <input type="text" class="form-control form-control-flush" name="q59a" placeholder="Type answer" style="border: 0.5px black">
+                                            </div>                                        
+                                        </div>
+                                        <ol type="i">
+                                            <li>                                            
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p>
+                                                            Based on the MyPlate guidelines, does that meal include all of the food 
+                                                            groups? If not, what would you change about the meal to be balanced?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                    
+                                                
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <textarea class="form-control" name="q59b" placeholder="Type answer"></textarea>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </li>
+
+                                    <li>
+                                        <div class="row">                                        
+                                            <div class="col-lg-2">
+                                                <p>
+                                                    Day and meal:
+                                                </p>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <input type="text" class="form-control form-control-flush" name="q60a" placeholder="Type answer" style="border: 0.5px black">
+                                            </div>                                        
+                                        </div>
+                                        <ol type="i">
+                                            <li>                                            
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p>
+                                                            Based on the MyPlate guidelines, does that meal include all of the food 
+                                                            groups? If not, what would you change about the meal to be balanced?
+                                                        </p>
+                                                    </div>
+                                                </div>
+                    
+                                                
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <textarea class="form-control" name="q60b" placeholder="Type answer"></textarea>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+
+                                
+                                <br>
+
+                            </li>
+                            
+                            
+                            <li>
+                                <div class="row">
+                                    <div class="col">
+                                        <p>
+                                            When you were advising Joleen about the meal plan,
+                                            she expressed the following concerns. Identify how you
+                                            would respond to Joleen to help her overcome those
+                                            challenges (this may include recommending
+                                            modifications to the menu).
+                                            </p>
+                                    </div>
+
+                                </div>
+
+                                <ol type="a">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>
+                                                    Three days per week she is on campus for class and cannot easily
+                                                    come home to eat lunch. (2 points)
+                                                </p>
+                                            
+                                            </div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <textarea class="form-control" name="q61a" placeholder="Type answer"></textarea>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>
+                                                    In the evenings, she is often tired and needs to study. She estimates
+                                                    she only has 30 minutes to spend preparing meals. (2 points)
+                                                </p>
+                                            
+                                            </div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <textarea class="form-control" name="q61b" placeholder="Type answer"></textarea>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="row">
+                                            <div class="col">
+                                                <p>
+                                                    Explain how this menu might need to be adapted if Joleen’s cooking skills are limited. (2 points)
+                                                </p>
+                                            
+                                            </div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <textarea class="form-control" name="q61c" placeholder="Type answer"></textarea>
+                                                </div>
+                                            </div>
+                                    </li>
+
+                                    
+                                
+                                <br>
+
+                            </li>
+                            
+                        </ol>
+
+                    </p>
+                    
+                </div>
+
                 <button type="submit" class="btn btn-outline-danger w-100">
                     Submit Quiz
                 </button>
             </div>
         </form>
     </div>
-
 </div>
 
 {% endblock %}
