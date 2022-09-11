@@ -392,3 +392,35 @@ CREATE TABLE IF NOT EXISTS `workbook_2` (
   CONSTRAINT `FK_workbook_2_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `quiz_4` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,
+  `q1a` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1b` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1c` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1d` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1e` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2a1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2a2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2b1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2b2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2c1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2c2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2d1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2d2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2e1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2e2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2f1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2f2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2g1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2g2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2h1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2h2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2i1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2i2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_quiz_4_users` (`student_id`),
+  CONSTRAINT `FK_quiz_1_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
