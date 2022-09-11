@@ -48,6 +48,7 @@ class User(db.Model):
 
     workbook_2 = db.relationship('WorkBook2', backref='user', lazy=True)
 
+    quiz_5 = db.relationship('Quiz5', backref='user', lazy=True)
 
     def insert(self):
         db.session.add(self)
@@ -585,6 +586,47 @@ class WorkBook2(db.Model):
     score = db.Column(db.Float, nullable = True)
 
     student = db.relationship('User', back_populates='workbook_2')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+class Quiz5(db.Model):
+    __tablename__ = 'quiz_5'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1a = db.Column(db.String)
+    q1b = db.Column(db.String)
+    q1c = db.Column(db.String)
+    q2a = db.Column(db.String)
+    q2b = db.Column(db.String)
+    q2c = db.Column(db.String)
+    q2d = db.Column(db.String)
+    q2e = db.Column(db.String)
+    q2f = db.Column(db.String)
+    q3 = db.Column(db.String)
+    q4 = db.Column(db.String)
+    q5a = db.Column(db.String)
+    q5b = db.Column(db.String)
+    q5c = db.Column(db.String)
+    
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_5')
 
     def insert(self):
         db.session.add(self)

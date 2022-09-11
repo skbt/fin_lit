@@ -392,3 +392,26 @@ CREATE TABLE IF NOT EXISTS `workbook_2` (
   CONSTRAINT `FK_workbook_2_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+CREATE TABLE IF NOT EXISTS `quiz_5` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,
+  `q1a` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1b` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q1c` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2a` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2b` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2c` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2d` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q2e` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q2f` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q3` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q4` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q5a` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q5b` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `q5c` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL, 
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_quiz_5_users` (`student_id`),
+  CONSTRAINT `FK_quiz_5_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
