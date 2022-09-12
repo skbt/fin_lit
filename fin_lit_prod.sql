@@ -520,3 +520,40 @@ CREATE TABLE IF NOT EXISTS `quiz_3` (
   KEY `FK_quiz_3_users` (`student_id`),
   CONSTRAINT `FK_quiz_3_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping structure for table fin_lit.quiz_8
+CREATE TABLE IF NOT EXISTS `quiz_8` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` int(11) DEFAULT NULL,  
+  `q1` varchar(100)  COLLATE utf8mb4_unicode_ci NULL,
+  `q2` varchar(100)  COLLATE utf8mb4_unicode_ci NULL,
+  `q3` varchar(100)  COLLATE utf8mb4_unicode_ci NULL,
+  `q4` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q5` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q6` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q7` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n1a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n1d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p1a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p1d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n2a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n2d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p2a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p2d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n3a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8n3d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p3a` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q8p3d` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q9` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q10` text  COLLATE utf8mb4_unicode_ci NULL,
+  `q11` text  COLLATE utf8mb4_unicode_ci NULL,
+  
+  
+  `score` float DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_quiz_8_users` (`student_id`),
+  CONSTRAINT `FK_quiz_8_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+

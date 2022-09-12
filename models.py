@@ -45,6 +45,8 @@ class User(db.Model):
     quiz_2 = db.relationship('Quiz2', backref='user', lazy=True)
 
     quiz_3 = db.relationship('Quiz3', backref='user', lazy=True)
+    
+    quiz_8 = db.relationship('Quiz8', backref='user', lazy=True)
 
     workbook_1 = db.relationship('WorkBook1', backref='user', lazy=True)
 
@@ -748,6 +750,59 @@ class Quiz3(db.Model):
 
     student = db.relationship('User', back_populates='quiz_3')
     
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+class Quiz8(db.Model):
+    __tablename__ = 'quiz_8'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1 = db.Column(db.String)
+    q2 = db.Column(db.String)
+    q3 = db.Column(db.String)
+    q4 = db.Column(db.Text, nullable = True)    
+    q5 = db.Column(db.Text, nullable = True)
+    q6 = db.Column(db.Text, nullable = True)    
+    q7 = db.Column(db.Text, nullable = True)
+    
+    q8n1a = db.Column(db.Text, nullable = True)
+    q8n1d = db.Column(db.Text, nullable = True)
+    q8p1a = db.Column(db.Text, nullable = True)
+    q8p1d = db.Column(db.Text, nullable = True)
+    
+    q8n2a = db.Column(db.Text, nullable = True)
+    q8n2d = db.Column(db.Text, nullable = True)
+    q8p2a = db.Column(db.Text, nullable = True)
+    q8p2d = db.Column(db.Text, nullable = True)
+    
+    q8n3a = db.Column(db.Text, nullable = True)
+    q8n3d = db.Column(db.Text, nullable = True)
+    q8p3a = db.Column(db.Text, nullable = True)
+    q8p3d = db.Column(db.Text, nullable = True)
+    
+    q9 = db.Column(db.Text, nullable = True)
+    q10 = db.Column(db.Text, nullable = True)
+    q11 = db.Column(db.Text, nullable = True)
+    
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_8')
+
     def insert(self):
         db.session.add(self)
         db.session.commit()
