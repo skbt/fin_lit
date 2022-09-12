@@ -558,7 +558,7 @@ CREATE TABLE IF NOT EXISTS `quiz_8` (
 
 
 -- Dumping structure for table fin_lit.test_1
-CREATE TABLE IF NOT EXISTS `quiz_8` (
+CREATE TABLE IF NOT EXISTS `test_1` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `student_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `semester` int(11) DEFAULT NULL,  
