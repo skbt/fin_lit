@@ -44,6 +44,8 @@ class User(db.Model):
 
     quiz_2 = db.relationship('Quiz2', backref='user', lazy=True)
 
+    quiz_3 = db.relationship('Quiz3', backref='user', lazy=True)
+
     workbook_1 = db.relationship('WorkBook1', backref='user', lazy=True)
 
     workbook_2 = db.relationship('WorkBook2', backref='user', lazy=True)
@@ -586,6 +588,166 @@ class WorkBook2(db.Model):
 
     student = db.relationship('User', back_populates='workbook_2')
 
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+class Quiz3(db.Model):
+    __tablename__ = 'quiz_3'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    
+    q1 = db.Column(db.Text, nullable = True)
+    q2 = db.Column(db.Text, nullable = True)    
+    q3 = db.Column(db.Text, nullable = True)
+    q4 = db.Column(db.Text, nullable = True)    
+    q5 = db.Column(db.Text, nullable = True)
+    q6 = db.Column(db.Text, nullable = True)    
+    q7 = db.Column(db.Text, nullable = True)
+    q8 = db.Column(db.Text, nullable = True)    
+    q9 = db.Column(db.Text, nullable = True)
+    q10 = db.Column(db.Text, nullable = True)    
+    q11 = db.Column(db.Text, nullable = True)
+    q12 = db.Column(db.Text, nullable = True)    
+    q13 = db.Column(db.Text, nullable = True)
+    q14 = db.Column(db.Text, nullable = True)    
+    q15 = db.Column(db.Text, nullable = True)
+    q16 = db.Column(db.Text, nullable = True)    
+    q17 = db.Column(db.Text, nullable = True)
+    q18 = db.Column(db.Text, nullable = True)    
+    q19 = db.Column(db.Text, nullable = True)
+    q20 = db.Column(db.Text, nullable = True)
+    q21 = db.Column(db.Text, nullable = True)
+    q22 = db.Column(db.Text, nullable = True)    
+    q23 = db.Column(db.Text, nullable = True)
+    q24 = db.Column(db.Text, nullable = True)    
+    q25 = db.Column(db.Text, nullable = True)
+    q26 = db.Column(db.Text, nullable = True)    
+    q27 = db.Column(db.Text, nullable = True)
+    q28 = db.Column(db.Text, nullable = True)    
+    q29 = db.Column(db.Text, nullable = True)
+    q30 = db.Column(db.Text, nullable = True)    
+    q31 = db.Column(db.Text, nullable = True)
+    q32 = db.Column(db.Text, nullable = True)    
+    q33 = db.Column(db.Text, nullable = True)
+    q34 = db.Column(db.Text, nullable = True)    
+    q35 = db.Column(db.Text, nullable = True)
+    q36 = db.Column(db.Text, nullable = True)    
+    q37 = db.Column(db.Text, nullable = True)    
+    q38 = db.Column(db.Text, nullable = True)
+
+    q39a = db.Column(db.Text, nullable = True)
+    q39b = db.Column(db.Text, nullable = True)
+    q39c = db.Column(db.Text, nullable = True)
+    q39d = db.Column(db.Text, nullable = True)
+    
+    q40a = db.Column(db.Text, nullable = True)
+    q40b = db.Column(db.Text, nullable = True)
+    q40c = db.Column(db.Text, nullable = True)
+    q40d = db.Column(db.Text, nullable = True)
+    
+    q41a = db.Column(db.Text, nullable = True)
+    q41b = db.Column(db.Text, nullable = True)
+    q41c = db.Column(db.Text, nullable = True)
+    q41d = db.Column(db.Text, nullable = True)
+    
+    q42a = db.Column(db.Text, nullable = True)
+    q42b = db.Column(db.Text, nullable = True)
+    q42c = db.Column(db.Text, nullable = True)
+    q42d = db.Column(db.Text, nullable = True)
+    
+    q43a = db.Column(db.Text, nullable = True)
+    q43b = db.Column(db.Text, nullable = True)
+    q43c = db.Column(db.Text, nullable = True)
+    q43d = db.Column(db.Text, nullable = True)
+    
+    q44a = db.Column(db.Text, nullable = True)
+    q44b = db.Column(db.Text, nullable = True)
+    q44c = db.Column(db.Text, nullable = True)
+    q44d = db.Column(db.Text, nullable = True)
+    
+    q45a = db.Column(db.Text, nullable = True)
+    q45b = db.Column(db.Text, nullable = True)
+    q45c = db.Column(db.Text, nullable = True)
+    q45d = db.Column(db.Text, nullable = True)
+    
+    q46a = db.Column(db.Text, nullable = True)
+    q46b = db.Column(db.Text, nullable = True)
+    q46c = db.Column(db.Text, nullable = True)
+    q46d = db.Column(db.Text, nullable = True)    
+    
+    q47a = db.Column(db.Text, nullable = True)
+    q47b = db.Column(db.Text, nullable = True)
+    q47c = db.Column(db.Text, nullable = True)
+    q47d = db.Column(db.Text, nullable = True)
+    
+    q48a = db.Column(db.Text, nullable = True)
+    q48b = db.Column(db.Text, nullable = True)
+    q48c = db.Column(db.Text, nullable = True)
+    q48d = db.Column(db.Text, nullable = True)
+    
+    q49a = db.Column(db.Text, nullable = True)
+    q49b = db.Column(db.Text, nullable = True)
+    q49c = db.Column(db.Text, nullable = True)
+    q49d = db.Column(db.Text, nullable = True)
+    
+    q50a = db.Column(db.Text, nullable = True)
+    q50b = db.Column(db.Text, nullable = True)
+    q50c = db.Column(db.Text, nullable = True)
+    q50d = db.Column(db.Text, nullable = True)
+    
+    q51a = db.Column(db.Text, nullable = True)
+    q51b = db.Column(db.Text, nullable = True)
+    q51c = db.Column(db.Text, nullable = True)
+    q51d = db.Column(db.Text, nullable = True)
+    
+    q52a = db.Column(db.Text, nullable = True)
+    q52b = db.Column(db.Text, nullable = True)
+    q52c = db.Column(db.Text, nullable = True)
+    q52d = db.Column(db.Text, nullable = True)
+    
+    q53a = db.Column(db.Text, nullable = True)
+    q53b = db.Column(db.Text, nullable = True)
+    q53c = db.Column(db.Text, nullable = True)
+    q53d = db.Column(db.Text, nullable = True)
+    
+    q54 = db.Column(db.Text, nullable = True)
+    q55 = db.Column(db.Text, nullable = True)
+    
+    q56a = db.Column(db.Text, nullable = True)
+    q56b = db.Column(db.Text, nullable = True)
+    q56c = db.Column(db.Text, nullable = True)
+    
+    q57 = db.Column(db.Text, nullable = True)
+    
+    q58a = db.Column(db.Text, nullable = True)
+    q58b = db.Column(db.Text, nullable = True)
+    
+    q59a = db.Column(db.Text, nullable = True)
+    q59b = db.Column(db.Text, nullable = True)
+    
+    q60a = db.Column(db.Text, nullable = True)
+    q60b = db.Column(db.Text, nullable = True)
+    q60c = db.Column(db.Text, nullable = True)
+    
+    score = db.Column(db.Float, nullable = True)
+
+    student = db.relationship('User', back_populates='quiz_3')
+    
     def insert(self):
         db.session.add(self)
         db.session.commit()
