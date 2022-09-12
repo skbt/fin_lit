@@ -143,6 +143,10 @@ def submit_quiz(id):
             case 4:
                 new_response = WorkBook2(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
+            case 9:
+                new_response = Quiz7(id=id, student_id=session['user']['id'], **form_data)
+                print("heer1")
+                new_response.insert()
         return redirect(request.referrer)
     except Exception as e:
         print(f'Error ==> {e}')
@@ -157,6 +161,7 @@ def grade_quiz(id):
         case 2: quiz_responses = Quiz2
         case 3: quiz_responses = WorkBook1
         case 4: quiz_responses = WorkBook2
+        case 9: quiz_responses = Quiz7
         # Other cases for other quizzes
         case other:
             flash("Invalid")
@@ -173,6 +178,7 @@ def score_quiz(id):
             case 2: quiz = Quiz2
             case 3: quiz = WorkBook1
             case 4: quiz = WorkBook2
+            case 9: quiz = Quiz7
         quiz_obj = quiz.query.filter_by(id=id).first()
         quiz_obj.score = form_data['score']
         quiz_obj.update()
