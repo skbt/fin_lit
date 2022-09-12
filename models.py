@@ -52,6 +52,8 @@ class User(db.Model):
 
     workbook_2 = db.relationship('WorkBook2', backref='user', lazy=True)
 
+    test_1 = db.relationship('Test1', backref='user', lazy=True)
+
 
     def insert(self):
         db.session.add(self)
@@ -802,6 +804,80 @@ class Quiz8(db.Model):
     score = db.Column(db.Float)
 
     student = db.relationship('User', back_populates='quiz_8')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+
+class Test1(db.Model):
+    __tablename__ = 'test_1'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1 = db.Column(db.String)
+    q2 = db.Column(db.String)
+    q3 = db.Column(db.String)
+    q4 = db.Column(db.String)
+    q5 = db.Column(db.String)
+    q6 = db.Column(db.String)
+    q7 = db.Column(db.String)
+    q8 = db.Column(db.String)
+    q9 = db.Column(db.String)
+    q10 = db.Column(db.String)
+    q11 = db.Column(db.String)
+    q12 = db.Column(db.String)
+    q13 = db.Column(db.String)
+    q14 = db.Column(db.String)
+    q15 = db.Column(db.String)
+    q16 = db.Column(db.String)
+    q17 = db.Column(db.String)
+    q18 = db.Column(db.String)
+    q19 = db.Column(db.String)
+    q20 = db.Column(db.String)
+    q21 = db.Column(db.String)
+    q22 = db.Column(db.String)
+    q23 = db.Column(db.String)
+    q24 = db.Column(db.String)
+    q25 = db.Column(db.String)
+    q26 = db.Column(db.String)
+    q27 = db.Column(db.String)
+    q28 = db.Column(db.String)
+    q29 = db.Column(db.String)
+    q30 = db.Column(db.String)
+    q31 = db.Column(db.String)
+    q32 = db.Column(db.String)
+    q33 = db.Column(db.String)
+    q34 = db.Column(db.String)
+    q35 = db.Column(db.String)
+    q36 = db.Column(db.String)
+    q37 = db.Column(db.String)
+    q38 = db.Column(db.String)
+    q39 = db.Column(db.String)
+    q40 = db.Column(db.String)
+    q41 = db.Column(db.String)
+    q42 = db.Column(db.String)
+    q43 = db.Column(db.String)
+    q44 = db.Column(db.String)
+    q45 = db.Column(db.String)
+    q46 = db.Column(db.String)
+    q47 = db.Column(db.String)
+    q48 = db.Column(db.String)
+    
+    student = db.relationship('User', back_populates='test_1')
 
     def insert(self):
         db.session.add(self)
