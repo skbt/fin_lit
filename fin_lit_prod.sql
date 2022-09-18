@@ -422,7 +422,7 @@ CREATE TABLE IF NOT EXISTS `quiz_4` (
   `score` float DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_quiz_4_users` (`student_id`),
-  CONSTRAINT `FK_quiz_1_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
+  CONSTRAINT `FK_quiz_4_users` FOREIGN KEY (`student_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping structure for table fin_lit.quiz_3
