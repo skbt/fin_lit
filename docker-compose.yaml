@@ -1,17 +1,21 @@
+name: fin_lit
 services:
   web:
     build: .
     ports:
-      - 5050:5000
+      - 5051:5000
   db:
     image: mariadb
-    ports:
-      - 3306:3306
     environment:
-      - MARIADB_ROOT_PASSWORD=${DB_ROOT_PWD}
-      - MARIADB_DATABASE=fin_lit=${DB_NAME}
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MARIADB_DATABASE=${MARIADB_DATABASE}
     volumes:
       - db-data:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8086:8080
 volumes:
   db-data:
     driver: local
