@@ -49,8 +49,9 @@ class User(db.Model):
     quiz_5 = db.relationship('Quiz5', backref='user', lazy=True)
     quiz_4 = db.relationship('Quiz4', backref='user', lazy=True)
     test_1 = db.relationship('Test1', backref='user', lazy=True)
-
+    quiz_7 = db.relationship('Quiz7', backref='user', lazy=True)
     quiz_6 = db.relationship('Quiz6', backref='user', lazy=True)
+
 
     def insert(self):
         db.session.add(self)
@@ -609,6 +610,7 @@ class WorkBook2(db.Model):
             'score': self.score,
         }
 
+
 class Quiz6(db.Model):
     __tablename__ = 'quiz_6'
     id = db.Column(db.Integer, primary_key=True)
@@ -1054,6 +1056,61 @@ class Test1(db.Model):
     q48 = db.Column(db.String)
     
     student = db.relationship('User', back_populates='test_1')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
+class Quiz7(db.Model):
+    __tablename__ = 'quiz_7'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1 = db.Column(db.String, server_default="off")
+    q2 = db.Column(db.String, server_default="off")
+    q3 = db.Column(db.String, server_default="off")
+    q4 = db.Column(db.String, server_default="off")
+    q5 = db.Column(db.String, server_default="off")
+    q6 = db.Column(db.String, server_default="off")
+    q7 = db.Column(db.String, server_default="off")
+    q8 = db.Column(db.String, server_default="off")
+    q9 = db.Column(db.String, server_default="off")
+    q10 = db.Column(db.String, server_default="off")
+    q11 = db.Column(db.String, server_default="off")
+    q12 = db.Column(db.String, server_default="off")
+    q13 = db.Column(db.String, server_default="off")
+    q14 = db.Column(db.String, server_default="off")
+    q15 = db.Column(db.String, server_default="off")
+    q16 = db.Column(db.String, server_default="off")
+    q17 = db.Column(db.String, server_default="off")
+    q18 = db.Column(db.String, server_default="off")
+    q19 = db.Column(db.String, server_default="off")
+    q20 = db.Column(db.String, server_default="off")
+    q21 = db.Column(db.String, server_default="off")
+    q22 = db.Column(db.String, server_default="off")
+    q23 = db.Column(db.String, server_default="off")
+    q24 = db.Column(db.String, server_default="off")
+    q25 = db.Column(db.String, server_default="off")
+    q26 = db.Column(db.String, server_default="off")
+    q27 = db.Column(db.String, server_default="off")
+    q28 = db.Column(db.String, server_default="off")
+
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_7')
 
     def insert(self):
         db.session.add(self)

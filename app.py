@@ -143,6 +143,8 @@ def submit_quiz(id):
             case 4:
                 new_response = WorkBook2(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
+            case 9:
+                new_response = Quiz7(id=id, student_id=session['user']['id'], **form_data)
             case 8:
                 new_response = Quiz6(id=id, student_id=session['user']['id'], **form_data)
             case 5:
@@ -172,6 +174,7 @@ def grade_quiz(id):
         case 2: quiz_responses = Quiz2
         case 3: quiz_responses = WorkBook1
         case 4: quiz_responses = WorkBook2
+        case 9: quiz_responses = Quiz7
         case 8: quiz_responses = Quiz6
         case 5: quiz_responses = Test1
         case 6: quiz_responses = Quiz4
@@ -194,6 +197,7 @@ def score_quiz(id):
             case 2: quiz = Quiz2
             case 3: quiz = WorkBook1
             case 4: quiz = WorkBook2
+            case 9: quiz = Quiz7
             case 8: quiz = Quiz6
             case 5: quiz = Test1
             case 6: quiz = Quiz4
