@@ -131,7 +131,6 @@ def submit_quiz(id):
     try:
         match id:
             case 1:
-                print("Yeah")
                 new_response = Quiz1(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()  
             case 2:
@@ -145,15 +144,19 @@ def submit_quiz(id):
                 new_response.insert()
             case 9:
                 new_response = Quiz7(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
             case 8:
                 new_response = Quiz6(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
             case 5:
                 new_response = Test1(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 6:
                 new_response = Quiz4(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
             case 7:
                 new_response = Quiz5(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
             case 10:
                 new_response = Quiz8(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
