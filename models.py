@@ -124,6 +124,7 @@ class Modules(db.Model):
     name = db.Column(db.String)
     desc= db.Column(db.String)
     image = db.Column(db.String)
+    redirect = db.Column(db.String)
 
     quizzes = db.relationship('ModuleQuiz', backref='quiz')
 
@@ -144,6 +145,7 @@ class Modules(db.Model):
             'name': self.name,
             'description': self.desc,
             'image': self.image,
+            'redirect': self.redirect
         }
 
 class ModuleScore(db.Model):
