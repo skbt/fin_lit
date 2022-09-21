@@ -689,7 +689,7 @@ class Quiz5(db.Model):
     score = db.Column(db.Float)
 
     student = db.relationship('User', back_populates='quiz_5')
-        def insert(self):
+    def insert(self):
         db.session.add(self)
         db.session.commit()
 
@@ -746,7 +746,7 @@ class Quiz4(db.Model):
 
     student = db.relationship('User', back_populates='quiz_4')
     
-        def insert(self):
+    def insert(self):
         db.session.add(self)
         db.session.commit()
 
