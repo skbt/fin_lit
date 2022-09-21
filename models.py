@@ -50,6 +50,7 @@ class User(db.Model):
     quiz_4 = db.relationship('Quiz4', backref='user', lazy=True)
     test_1 = db.relationship('Test1', backref='user', lazy=True)
 
+    quiz_6 = db.relationship('Quiz6', backref='user', lazy=True)
 
     def insert(self):
         db.session.add(self)
@@ -608,6 +609,62 @@ class WorkBook2(db.Model):
             'score': self.score,
         }
 
+class Quiz6(db.Model):
+    __tablename__ = 'quiz_6'
+    id = db.Column(db.Integer, primary_key=True)
+    student_id = db.Column(db.String, db.ForeignKey('users.id'))
+    q1 = db.Column(db.String)
+    q2 = db.Column(db.String)
+    q3 = db.Column(db.String)
+    q4 = db.Column(db.String)
+    q5 = db.Column(db.String)
+    q6 = db.Column(db.String)
+    q7 = db.Column(db.String)
+    q8 = db.Column(db.String)
+    q9 = db.Column(db.String)
+    q10 = db.Column(db.String)
+    q11a = db.Column(db.String)
+    q11b = db.Column(db.String)
+    q12a = db.Column(db.String)
+    q12b = db.Column(db.String)
+    q12c = db.Column(db.String)
+    q13a = db.Column(db.String)
+    q13b = db.Column(db.String)
+    q13c = db.Column(db.String)
+    q14 = db.Column(db.String)
+    q15 = db.Column(db.String)
+    q16a = db.Column(db.String)
+    q16b = db.Column(db.String)
+    q16c = db.Column(db.String)
+    q16d = db.Column(db.String)
+    q16e = db.Column(db.String)
+    q16f = db.Column(db.String)
+    q17 = db.Column(db.String)
+    q18 = db.Column(db.String)
+    q19 = db.Column(db.String)
+    
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_6')
+
+    def insert(self):
+        db.session.add(self)
+        db.session.commit()
+
+    def update(self):
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+
+    def format(self):
+        return {
+            'id': self.id,
+            'student_id': self.student_id,
+            'score': self.score,
+        }
+
 class Quiz5(db.Model):
     __tablename__ = 'quiz_5'
     id = db.Column(db.Integer, primary_key=True)
@@ -933,6 +990,30 @@ class Test1(db.Model):
     q8 = db.Column(db.String)
     q9 = db.Column(db.String)
     q10 = db.Column(db.String)
+    q11a = db.Column(db.String)
+    q11b = db.Column(db.String)
+    q12a = db.Column(db.String)
+    q12b = db.Column(db.String)
+    q12c = db.Column(db.String)
+    q13a = db.Column(db.String)
+    q13b = db.Column(db.String)
+    q13c = db.Column(db.String)
+    q14 = db.Column(db.String)
+    q15 = db.Column(db.String)
+    q16a = db.Column(db.String)
+    q16b = db.Column(db.String)
+    q16c = db.Column(db.String)
+    q16d = db.Column(db.String)
+    q16e = db.Column(db.String)
+    q16f = db.Column(db.String)
+    q17 = db.Column(db.String)
+    q18 = db.Column(db.String)
+    q19 = db.Column(db.String)
+    
+    score = db.Column(db.Float)
+
+    student = db.relationship('User', back_populates='quiz_6')
+
     q11 = db.Column(db.String)
     q12 = db.Column(db.String)
     q13 = db.Column(db.String)
