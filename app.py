@@ -145,7 +145,20 @@ def submit_quiz(id):
                 new_response.insert()
             case 9:
                 new_response = Quiz7(id=id, student_id=session['user']['id'], **form_data)
-                print("heer1")
+            case 8:
+                new_response = Quiz6(id=id, student_id=session['user']['id'], **form_data)
+            case 5:
+                new_response = Test1(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
+            case 6:
+                new_response = Quiz4(id=id, student_id=session['user']['id'], **form_data)
+            case 7:
+                new_response = Quiz5(id=id, student_id=session['user']['id'], **form_data)
+            case 10:
+                new_response = Quiz8(id=id, student_id=session['user']['id'], **form_data)
+                new_response.insert()
+            case 11:
+                new_response = Quiz3(id=id, student_id=session['user']['id'], **form_data)
                 new_response.insert()
         return redirect(request.referrer)
     except Exception as e:
@@ -162,6 +175,12 @@ def grade_quiz(id):
         case 3: quiz_responses = WorkBook1
         case 4: quiz_responses = WorkBook2
         case 9: quiz_responses = Quiz7
+        case 8: quiz_responses = Quiz6
+        case 5: quiz_responses = Test1
+        case 6: quiz_responses = Quiz4
+        case 7: quiz_responses = Quiz5
+        case 10: quiz_responses = Quiz8
+        case 11: quiz_responses = Quiz3
         # Other cases for other quizzes
         case other:
             flash("Invalid")
@@ -179,6 +198,12 @@ def score_quiz(id):
             case 3: quiz = WorkBook1
             case 4: quiz = WorkBook2
             case 9: quiz = Quiz7
+            case 8: quiz = Quiz6
+            case 5: quiz = Test1
+            case 6: quiz = Quiz4
+            case 7: quiz = Quiz5
+            case 10: quiz = Quiz8
+            case 11: quiz = Quiz3
         quiz_obj = quiz.query.filter_by(id=id).first()
         quiz_obj.score = form_data['score']
         quiz_obj.update()
@@ -190,6 +215,17 @@ def score_quiz(id):
 
 @app.route('/workbook/<id>')
 def workbook(id):
+    quiz = ModuleQuiz.query.filter_by(id=id).first()
+    return render_template(f'quiz/{quiz.file_name}.html', quiz=quiz)
+
+@app.route('/test')
+# def quiz(id):
+def final_test():
+    if 'user' not in session:
+        flash('Please login to start the test!')
+        return redirect(request.referrer)
+
+    id = 5
     quiz = ModuleQuiz.query.filter_by(id=id).first()
     return render_template(f'quiz/{quiz.file_name}.html', quiz=quiz)
 

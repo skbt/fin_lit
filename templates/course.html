@@ -49,9 +49,15 @@ Fin Lit | Course
                                 {{ module.desc }}
                             </p>
                             <div class="empty-action">
+                                {% if not module.redirect %}
                                 <a href="/modules/{{ module.id }}" class="btn btn-primary">
                                     Start
                                 </a>
+                                {% else %}
+                                <a href="{{ module.redirect }}" class="btn btn-primary" target="_blank">
+                                    Start
+                                </a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
