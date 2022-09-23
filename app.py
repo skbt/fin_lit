@@ -200,11 +200,11 @@ def score_quiz(id):
             case 2: quiz = Quiz2
             case 3: quiz = WorkBook1
             case 4: quiz = WorkBook2
-            case 9: quiz = Quiz7
-            case 8: quiz = Quiz6
             case 5: quiz = Test1
             case 6: quiz = Quiz4
             case 7: quiz = Quiz5
+            case 8: quiz = Quiz6
+            case 9: quiz = Quiz7
             case 10: quiz = Quiz8
             case 11: quiz = Quiz3
         quiz_obj = quiz.query.filter_by(id=id).first()
