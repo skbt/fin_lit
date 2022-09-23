@@ -992,30 +992,6 @@ class Test1(db.Model):
     q8 = db.Column(db.String)
     q9 = db.Column(db.String)
     q10 = db.Column(db.String)
-    q11a = db.Column(db.String)
-    q11b = db.Column(db.String)
-    q12a = db.Column(db.String)
-    q12b = db.Column(db.String)
-    q12c = db.Column(db.String)
-    q13a = db.Column(db.String)
-    q13b = db.Column(db.String)
-    q13c = db.Column(db.String)
-    q14 = db.Column(db.String)
-    q15 = db.Column(db.String)
-    q16a = db.Column(db.String)
-    q16b = db.Column(db.String)
-    q16c = db.Column(db.String)
-    q16d = db.Column(db.String)
-    q16e = db.Column(db.String)
-    q16f = db.Column(db.String)
-    q17 = db.Column(db.String)
-    q18 = db.Column(db.String)
-    q19 = db.Column(db.String)
-    
-    score = db.Column(db.Float)
-
-    student = db.relationship('User', back_populates='quiz_6')
-
     q11 = db.Column(db.String)
     q12 = db.Column(db.String)
     q13 = db.Column(db.String)
@@ -1054,7 +1030,9 @@ class Test1(db.Model):
     q46 = db.Column(db.String)
     q47 = db.Column(db.String)
     q48 = db.Column(db.String)
-    
+
+    score = db.Column(db.Float)
+
     student = db.relationship('User', back_populates='test_1')
 
     def insert(self):
