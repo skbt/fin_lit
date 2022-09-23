@@ -189,7 +189,10 @@ def grade_quiz(id):
             flash("Invalid")
             return redirect(request.referrer)
     responses = quiz_responses.query.all()
-    return render_template(f'admin/quiz_{id}_grade.html', quiz=quiz, responses=responses)
+
+    file_name = quiz.file_name
+
+    return render_template(f'admin/{file_name}_grade.html', quiz=quiz, responses=responses)
 
 @app.route('/quiz/score/<int:id>', methods=['POST'])
 def score_quiz(id):
