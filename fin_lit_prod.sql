@@ -101,7 +101,7 @@ INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUE
 (7,	2,	'Food Reinforcement',	'quiz_5',	'quiz'),
 (8,	2,	'Housing Reinforcement',	'quiz_6',	'quiz'),
 (9,	2,	'Rental Agreement Checklist',	'quiz_7',	'quiz'),
-(10,	2,	'Transportation Reinforcement',	'quiz_8',	'quiz')
+(10,	2,	'Transportation Reinforcement',	'quiz_8',	'quiz'),
 (11,	2,	'Eating on Budget',	'quiz_3',	'quiz');
 
 DROP TABLE IF EXISTS `module_scores`;
