@@ -101,11 +101,8 @@ INSERT INTO `module_quiz` (`id`, `module_id`, `name`, `file_name`, `type`) VALUE
 (7,	2,	'Food Reinforcement',	'quiz_5',	'quiz'),
 (8,	2,	'Housing Reinforcement',	'quiz_6',	'quiz'),
 (9,	2,	'Rental Agreement Checklist',	'quiz_7',	'quiz'),
-(10,	2,	'Transportation Reinforcement',	'quiz_8',	'quiz'),
-(15,	2,	'Housing Reinforcement',	'quiz_6',	'quiz'),
-(16,	2,	'Rental Agreement Checklist',	'quiz_7',	'quiz'),
-(17,	2,	'Transportation Reinforcement',	'quiz_8',	'quiz'),
-(18,	2,	'Eating on Budget',	'quiz_3',	'quiz');
+(10,	2,	'Transportation Reinforcement',	'quiz_8',	'quiz')
+(11,	2,	'Eating on Budget',	'quiz_3',	'quiz');
 
 DROP TABLE IF EXISTS `module_scores`;
 CREATE TABLE `module_scores` (
@@ -350,6 +347,10 @@ CREATE TABLE `quiz_4` (
   `q2h2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `q2i1` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `q2i2` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q3` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q4` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q5` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `q6` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
   `score` float DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_quiz_4_users` (`student_id`),

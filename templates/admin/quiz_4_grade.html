@@ -1,0 +1,209 @@
+{% extends 'base_w_header.html' %}
+{% set page = "" %}
+{% block title %}
+Fin Lit | Admin
+{% endblock %}
+
+{% block styles %}
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/new_styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="page-wrapper">
+    <div class="container-xl">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-primary mt-3 alert-dismissible mb-0 fade show" role="alert">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <!-- Page title -->
+        <div class="page-header d-print-none">
+            <div class="row g-2 align-items-center">
+                <div class="col">
+                    <!-- Page pre-title -->
+                    <div class="page-pretitle">
+                        Grading
+                    </div>
+                    <h2 class="page-title">
+                        {{ quiz.module.name | capitalize }} - {{ quiz.name }}
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-body">
+        <div class="container-xl">
+            <div class="row row-deck row-cards">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="subheader">Users</div>
+                                <div class="ms-auto lh-1">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Last 7 days</a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item active" href="#">Last 7 days</a>
+                                            <a class="dropdown-item" href="#">Last 30 days</a>
+                                            <a class="dropdown-item" href="#">Last 3 months</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1 mb-3">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="subheader">Submissions</div>
+                                <div class="ms-auto lh-1">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Last 7 days</a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item active" href="#">Last 7 days</a>
+                                            <a class="dropdown-item" href="#">Last 30 days</a>
+                                            <a class="dropdown-item" href="#">Last 3 months</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1 mb-3">{{ responses | length }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="subheader">Statistic</div>
+                                <div class="ms-auto lh-1">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Last 7 days</a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item active" href="#">Last 7 days</a>
+                                            <a class="dropdown-item" href="#">Last 30 days</a>
+                                            <a class="dropdown-item" href="#">Last 3 months</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1 mb-3">0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="subheader">Statistic</div>
+                                <div class="ms-auto lh-1">
+                                    <div class="dropdown">
+                                        <a class="dropdown-toggle text-muted" href="#" data-bs-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">Last 7 days</a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <a class="dropdown-item active" href="#">Last 7 days</a>
+                                            <a class="dropdown-item" href="#">Last 30 days</a>
+                                            <a class="dropdown-item" href="#">Last 3 months</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h1 mb-3">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-vcenter card-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Q1a</th>
+                                <th>Q1b</th>
+                                <th>Q1c</th>
+                                <th>Q1d</th>
+                                <th>Q1e</th>
+                                <th>Q2a1</th>
+                                <th>Q2a2</th>
+                                <th>Q2b1</th>
+                                <th>Q2b2</th>
+                                <th>Q2c1</th>
+                                <th>Q2c2</th>
+                                <th>Q2d1</th>
+                                <th>Q2d2</th>
+                                <th>Q2e1</th>
+                                <th>Q2e2</th>
+                                <th>Q2f1</th>
+                                <th>Q2f2</th>
+                                <th>Q2g1</th>
+                                <th>Q2g2</th>
+                                <th>Q2h1</th>
+                                <th>Q2h2</th>
+                                <th>Q2i1</th>
+                                <th>Q2i2</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in responses %}
+                            <tr>
+                                <td>{{ item.student.name }}</td>
+                                <td>{{ item.q1a }}</td>
+                                <td>{{ item.q1b }}</td>
+                                <td>{{ item.q1c }}</td>
+                                <td>{{ item.q1d }}</td>
+                                <td>{{ item.q1e }}</td>
+                                <td>{{ item.q2a1 }}</td>
+                                <td>{{ item.q2a2 }}</td>
+                                <td>{{ item.q2b1 }}</td>
+                                <td>{{ item.q2b2 }}</td>
+                                <td>{{ item.q2c1 }}</td>
+                                <td>{{ item.q2c2 }}</td>
+                                <td>{{ item.q2d1 }}</td>
+                                <td>{{ item.q2d2 }}</td>
+                                <td>{{ item.q2e1 }}</td>
+                                <td>{{ item.q2e2 }}</td>
+                                <td>{{ item.q2f1 }}</td>
+                                <td>{{ item.q2f2 }}</td>                                
+                                <td>{{ item.q2g1 }}</td>
+                                <td>{{ item.q2g2 }}</td>
+                                <td>{{ item.q2h1 }}</td>
+                                <td>{{ item.q2h2 }}</td>
+                                <td>{{ item.q2i1 }}</td>
+                                <td>{{ item.q2i2 }}</td>
+                                <td>
+                                    <form action="/quiz/score/{{ item.id }}" method="post">
+                                        <input type="text" class="form-control form-control-flush"
+                                            name="score" placeholder="" value="{{ item.score if item.score else '' }}">
+                                        <input type="submit" style="display: none" />
+                                    </form>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+{% endblock %}
