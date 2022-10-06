@@ -131,37 +131,37 @@ def submit_quiz(id):
     try:
         match id:
             case 1:
-                new_response = Quiz1(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz1(student_id=session['user']['id'], **form_data)
                 new_response.insert()  
             case 2:
-                new_response = Quiz2(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz2(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 3:
-                new_response = WorkBook1(id=id, student_id=session['user']['id'], **form_data)
+                new_response = WorkBook1(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 4:
-                new_response = WorkBook2(id=id, student_id=session['user']['id'], **form_data)
+                new_response = WorkBook2(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 9:
-                new_response = Quiz7(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz7(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 8:
-                new_response = Quiz6(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz6(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 5:
-                new_response = Test1(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Test1(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 6:
-                new_response = Quiz4(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz4(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 7:
-                new_response = Quiz5(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz5(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 10:
-                new_response = Quiz8(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz8(student_id=session['user']['id'], **form_data)
                 new_response.insert()
             case 11:
-                new_response = Quiz3(id=id, student_id=session['user']['id'], **form_data)
+                new_response = Quiz3(student_id=session['user']['id'], **form_data)
                 new_response.insert()
         return redirect(request.referrer)
     except Exception as e:
